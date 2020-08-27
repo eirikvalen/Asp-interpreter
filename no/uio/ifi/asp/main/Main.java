@@ -19,6 +19,7 @@ public class Main {
 
 	System.out.println("This is the IN2030 Asp interpreter (" +
 			   version + ")");
+	System.out.println("Implemented by Eirik Valen <eiriv@student.matnat.uio.no> and Ingeborg Steel <ingebows@student.matnat.uio.no>");
 
 	for (int i = 0;  i < arg.length;  i++) {
 	    String a = arg[i];
