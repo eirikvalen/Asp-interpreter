@@ -3,5 +3,5 @@
 # (I Python 2 er det anderledes; da brukes innledende 0-siffer
 # til å angi at tallet er på oktal form.)
 
-a = 0   # Dette er helt OK.
+a = 0.3   # Dette er helt OK.
 a = 04  # Men ikke dette. I Asp er dette to tall: 0 og 4!
