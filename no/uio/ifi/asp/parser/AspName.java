@@ -11,27 +11,23 @@ public class AspName extends AspAtom {
         super(n);
     }
 
-    public static AspName parse(Scanner s){
+    public static AspName parse(Scanner s) {
         enterParser("name");
 
         AspName an = new AspName(s.curLineNum());
         skip(s, TokenKind.nameToken);
 
         leaveParser("name");
-
         return an;
     }
 
-
-
-
     @Override
-    void prettyPrint() {
+    public void prettyPrint() {
 
     }
 
     @Override
-    RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
+    public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         return null;
     }
 }

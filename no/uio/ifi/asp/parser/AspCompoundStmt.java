@@ -9,19 +9,17 @@ import no.uio.ifi.asp.scanner.Scanner;
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 import static no.uio.ifi.asp.scanner.TokenKind.whileToken;
 
-public abstract class AspCompoundStmt extends AspStmt{
+public abstract class AspCompoundStmt extends AspStmt {
 
     AspCompoundStmt(int n) {
         super(n);
     }
 
-
     public static AspCompoundStmt parse(Scanner s) {
         enterParser("CompoundStatement");
 
         AspCompoundStmt acs = null;
-
-        switch (s.curToken().kind){
+        switch (s.curToken().kind) {
             case forToken:
                 acs = AspForStmt.parse(s);
                 break;
@@ -34,33 +32,23 @@ public abstract class AspCompoundStmt extends AspStmt{
             case whileToken:
                 acs = AspWhileStmt.parse(s);
                 break;
-
             default:
-                //TODO Endre message
-                parserError("compound statment error", s.curLineNum());
-
-
+                parserError("Expected a compound statement but found a " +
+                        s.curToken().kind + "!", s.curLineNum());
         }
-
-
 
         leaveParser("CompoundStatement");
         return acs;
     }
-
 
     @Override
     public void prettyPrint() {
 
     }
 
-
     @Override
     public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
 
         return null;
     }
-
-
-
 }

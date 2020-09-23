@@ -7,14 +7,15 @@ import no.uio.ifi.asp.scanner.Scanner;
 
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
-public class AspTermOpr extends AspSyntax{
+public class AspTermOpr extends AspSyntax {
+
     AspTermOpr(int n) { super(n); }
 
-    static AspTermOpr parse(Scanner s){
+    static AspTermOpr parse(Scanner s) {
         enterParser("term opr");
-        AspTermOpr aps = new AspTermOpr(s.curLineNum());
 
-        switch(s.curToken().kind){
+        AspTermOpr aps = new AspTermOpr(s.curLineNum());
+        switch (s.curToken().kind) {
             case plusToken:
                 skip(s, plusToken);
             case minusToken:

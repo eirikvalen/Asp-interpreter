@@ -9,11 +9,11 @@ public abstract class AspSmallStmt extends AspSyntax {
 
     AspSmallStmt(int n) { super(n); }
 
-    static AspSmallStmt parse(Scanner s){
+    static AspSmallStmt parse(Scanner s) {
         enterParser("small stmt");
-        AspSmallStmt ass;
 
-        switch (s.curToken().kind){
+        AspSmallStmt ass;
+        switch (s.curToken().kind) {
             case returnToken:
                 ass = AspReturnStmt.parse(s);
                 break;
@@ -21,10 +21,9 @@ public abstract class AspSmallStmt extends AspSyntax {
                 ass = AspPassStmt.parse(s);
                 break;
             default:
-                if (s.anyEqualToken()){
+                if (s.anyEqualToken()) {
                     ass = AspAssignment.parse(s);
-                }
-                else{
+                } else {
                     ass = AspExprStmt.parse(s);
                 }
         }

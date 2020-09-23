@@ -12,45 +12,37 @@ public class AspListDisplay extends AspAtom {
 
     ArrayList<AspExpr> exprs = new ArrayList<>();
 
-
     AspListDisplay(int n) {
         super(n);
-    }
-
-    @Override
-    void prettyPrint() {
-
     }
 
     public static AspListDisplay parse(Scanner s) {
         enterParser("list display");
 
         AspListDisplay ald = new AspListDisplay(s.curLineNum());
-
         skip(s, TokenKind.leftBraceToken);
-
         if (s.curToken().kind != TokenKind.rightBracketToken) {
             while (true) {
                 ald.exprs.add(AspExpr.parse(s));
-
                 if (s.curToken().kind != TokenKind.commaToken) {
                     break;
                 }
-
                 skip(s, TokenKind.commaToken);
-
-
             }
         }
-
         skip(s, TokenKind.rightBracketToken);
+        
         leaveParser("list display");
         return ald;
     }
 
+    @Override
+    public void prettyPrint() {
+
+    }
 
     @Override
-    RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
+    public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         return null;
     }
 }

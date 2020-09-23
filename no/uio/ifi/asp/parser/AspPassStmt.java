@@ -4,17 +4,17 @@ import no.uio.ifi.asp.runtime.RuntimeReturnValue;
 import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
+
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspPassStmt extends AspSmallStmt {
 
     AspPassStmt(int n) { super(n); }
 
-    static AspPassStmt parse(Scanner s){
+    static AspPassStmt parse(Scanner s) {
         enterParser("pass stmt");
 
         AspPassStmt aps = new AspPassStmt(s.curLineNum());
-
         skip(s, passToken);
 
         leaveParser("pass stmt");

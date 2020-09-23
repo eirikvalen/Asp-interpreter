@@ -3,18 +3,18 @@ package no.uio.ifi.asp.parser;
 import no.uio.ifi.asp.scanner.Scanner;
 import no.uio.ifi.asp.scanner.TokenKind;
 
-public class AspForStmt extends AspCompoundStmt{
+public class AspForStmt extends AspCompoundStmt {
+
     AspName name;
     AspExpr expression;
     AspSuite suite;
-
 
     AspForStmt(int n) {
         super(n);
     }
 
-    public static AspForStmt parse(Scanner s){
-        enterParser("For");
+    public static AspForStmt parse(Scanner s) {
+        enterParser("for stmt");
 
         AspForStmt afs = new AspForStmt(s.curLineNum());
         skip(s, TokenKind.forToken);
@@ -24,10 +24,7 @@ public class AspForStmt extends AspCompoundStmt{
         skip(s, TokenKind.colonToken);
         afs.suite = AspSuite.parse(s);
 
-        leaveParser("For");
-
+        leaveParser("for stmt");
         return afs;
     }
-
-
 }

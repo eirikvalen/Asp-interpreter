@@ -7,7 +7,8 @@ import no.uio.ifi.asp.scanner.Scanner;
 
 import java.util.ArrayList;
 
-public class AspTerm extends AspSyntax{
+public class AspTerm extends AspSyntax {
+
     ArrayList<AspFactor> factors = new ArrayList<>();
     ArrayList<AspTermOpr> termOprs = new ArrayList<>();
 
@@ -17,10 +18,9 @@ public class AspTerm extends AspSyntax{
         enterParser("term");
 
         AspTerm at = new AspTerm(s.curLineNum());
-
-        while (true){
+        while (true) {
             at.factors.add(AspFactor.parse(s));
-            if(!s.isTermOpr()) break;
+            if (!s.isTermOpr()) break;
             at.termOprs.add(AspTermOpr.parse(s));
         }
 

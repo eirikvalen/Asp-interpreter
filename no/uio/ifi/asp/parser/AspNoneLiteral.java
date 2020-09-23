@@ -11,24 +11,23 @@ public class AspNoneLiteral extends AspAtom {
         super(n);
     }
 
-    public static AspNoneLiteral parse(Scanner s){
+    public static AspNoneLiteral parse(Scanner s) {
         enterParser("None literal");
+
         AspNoneLiteral anl = new AspNoneLiteral(s.curLineNum());
         skip(s, TokenKind.noneToken);
+
         leaveParser("None literal");
         return anl;
+    }
 
-
+    @Override
+    public void prettyPrint() {
 
     }
 
     @Override
-    void prettyPrint() {
-
-    }
-
-    @Override
-    RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
+    public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         return null;
     }
 }

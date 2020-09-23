@@ -16,13 +16,14 @@ public class AspComparison extends AspSyntax {
     AspComparison(int n) {
         super(n);
     }
+
     static AspComparison parse(Scanner s) {
         enterParser("comparison");
-        AspComparison ac = new AspComparison(s.curLineNum());
 
-        while (true){
+        AspComparison ac = new AspComparison(s.curLineNum());
+        while (true) {
             ac.terms.add(AspTerm.parse(s));
-            if(!s.isCompOpr()) break;
+            if (!s.isCompOpr()) break;
             ac.compOprs.add(AspCompOpr.parse(s));
         }
 

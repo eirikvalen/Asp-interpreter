@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
-public abstract class AspStmt extends AspSyntax{
+public abstract class AspStmt extends AspSyntax {
 
     AspStmt(int n) {
         super(n);
@@ -19,29 +19,23 @@ public abstract class AspStmt extends AspSyntax{
         enterParser("stmt");
 
         AspStmt as;
-
-        if (s.curToken().kind == forToken || s.curToken().kind == defToken || s.curToken().kind == ifToken || s.curToken().kind == whileToken){
+        if (s.curToken().kind == forToken || s.curToken().kind == defToken || s.curToken().kind == ifToken || s.curToken().kind == whileToken) {
             as = AspCompoundStmt.parse(s);
-        }else{
+        } else {
             as = AspSmallStmtList.parse(s);
         }
-
 
         leaveParser("stmt");
         return as;
     }
-
 
     @Override
     public void prettyPrint() {
 
     }
 
-
     @Override
     public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-
         return null;
     }
-    
 }

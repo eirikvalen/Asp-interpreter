@@ -7,7 +7,8 @@ import no.uio.ifi.asp.scanner.Scanner;
 
 import java.util.ArrayList;
 
-public class AspFactor extends AspSyntax{
+public class AspFactor extends AspSyntax {
+
     ArrayList<AspFactorPrefix> factorPrefixes = new ArrayList<>();
     ArrayList<AspPrimary> primarys = new ArrayList<>();
     ArrayList<AspFactorOpr> factorOprs = new ArrayList<>();
@@ -18,12 +19,12 @@ public class AspFactor extends AspSyntax{
 
     static AspFactor parse(Scanner s) {
         enterParser("factor");
-        AspFactor af = new AspFactor(s.curLineNum());
 
-        while (true){
-            if(s.isFactorPrefix()) af.factorPrefixes.add(AspFactorPrefix.parse(s));
+        AspFactor af = new AspFactor(s.curLineNum());
+        while (true) {
+            if (s.isFactorPrefix()) af.factorPrefixes.add(AspFactorPrefix.parse(s));
             af.primarys.add(AspPrimary.parse(s));
-            if(!s.isFactorOpr()) break;
+            if (!s.isFactorOpr()) break;
             af.factorOprs.add(AspFactorOpr.parse(s));
         }
 

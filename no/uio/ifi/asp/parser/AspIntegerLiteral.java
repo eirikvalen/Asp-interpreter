@@ -10,9 +10,8 @@ public class AspIntegerLiteral extends AspAtom {
     AspIntegerLiteral(int n) {
         super(n);
     }
-
-
-    public static AspIntegerLiteral parse(Scanner s){
+    
+    public static AspIntegerLiteral parse(Scanner s) {
         enterParser("Integer literal");
 
         AspIntegerLiteral ail = new AspIntegerLiteral(s.curLineNum());
@@ -23,12 +22,12 @@ public class AspIntegerLiteral extends AspAtom {
     }
 
     @Override
-    void prettyPrint() {
+    public void prettyPrint() {
 
     }
 
     @Override
-    RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
+    public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         return null;
     }
 }

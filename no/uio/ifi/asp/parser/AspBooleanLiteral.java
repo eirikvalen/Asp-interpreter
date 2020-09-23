@@ -7,31 +7,29 @@ import no.uio.ifi.asp.scanner.Scanner;
 import no.uio.ifi.asp.scanner.TokenKind;
 
 public class AspBooleanLiteral extends AspAtom {
+
     AspBooleanLiteral(int n) {
         super(n);
+    }
+
+    public static AspBooleanLiteral parse(Scanner s) {
+        enterParser("boolean literal");
+
+        AspBooleanLiteral abl = new AspBooleanLiteral(s.curLineNum());
+        if (s.curToken().kind == TokenKind.trueToken) {
+            skip(s, TokenKind.trueToken);
+        } else {
+            skip(s, TokenKind.falseToken);
+        }
+
+        leaveParser("boolean literal");
+        return abl;
     }
 
     @Override
     void prettyPrint() {
 
     }
-
-    public static AspBooleanLiteral parse(Scanner s){
-        enterParser("boolean literal");
-
-        AspBooleanLiteral abl = new AspBooleanLiteral(s.curLineNum());
-        if( s.curToken().kind == TokenKind.trueToken){
-            skip(s, TokenKind.trueToken);
-        }else {
-            skip(s, TokenKind.falseToken);
-        }
-
-
-
-        leaveParser("boolean literal");
-        return abl;
-    }
-
 
     @Override
     RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {

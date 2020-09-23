@@ -5,10 +5,13 @@ import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
 import no.uio.ifi.asp.scanner.TokenKind;
+
 import java.util.ArrayList;
+
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspSmallStmtList extends AspStmt {
+
     ArrayList<AspSmallStmt> smallStmts = new ArrayList<>();
 
     AspSmallStmtList(int n) { super(n); }
@@ -17,13 +20,12 @@ public class AspSmallStmtList extends AspStmt {
         enterParser("small stmt list");
 
         AspSmallStmtList assm = new AspSmallStmtList(s.curLineNum());
-
-        while(true){
+        while (true) {
             assm.smallStmts.add(AspSmallStmt.parse(s));
-            if(s.curToken().kind == semicolonToken){
+            if (s.curToken().kind == semicolonToken) {
                 skip(s, semicolonToken);
             }
-            if(s.curToken().kind == newLineToken){
+            if (s.curToken().kind == newLineToken) {
                 skip(s, newLineToken);
                 break;
             }

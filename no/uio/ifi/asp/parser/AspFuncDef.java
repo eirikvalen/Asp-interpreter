@@ -15,19 +15,17 @@ public class AspFuncDef extends AspCompoundStmt {
         super(n);
     }
 
-
-    public static AspFuncDef parse(Scanner s){
-
-        enterParser("function def");
+    public static AspFuncDef parse(Scanner s) {
+        enterParser("func def");
 
         AspFuncDef afd = new AspFuncDef(s.curLineNum());
 
         afd.names.add(AspName.parse(s));
         skip(s, TokenKind.leftParToken);
 
-        while(true){
+        while (true) {
             afd.names.add(AspName.parse(s));
-            if (s.curToken().kind != TokenKind.commaToken){
+            if (s.curToken().kind != TokenKind.commaToken) {
                 break;
             }
             skip(s, TokenKind.commaToken);
@@ -39,7 +37,7 @@ public class AspFuncDef extends AspCompoundStmt {
         afd.body = AspSuite.parse(s);
 
 
-        leaveParser("function def");
+        leaveParser("func def");
 
         return afd;
 

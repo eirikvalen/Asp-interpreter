@@ -13,44 +13,38 @@ public class AspDictDisplay extends AspAtom {
     ArrayList<AspStringLiteral> stringLits = new ArrayList<>();
     ArrayList<AspExpr> expressions = new ArrayList<>();
 
-
     AspDictDisplay(int n) {
         super(n);
     }
 
-
-    public static AspDictDisplay parse(Scanner s){
+    public static AspDictDisplay parse(Scanner s) {
         enterParser("dict display");
+
         AspDictDisplay adict = new AspDictDisplay(s.curLineNum());
-
         skip(s, TokenKind.leftBraceToken);
-
-        while (true){
+        while (true) {
             adict.stringLits.add(AspStringLiteral.parse(s));
             skip(s, TokenKind.colonToken);
             adict.expressions.add(AspExpr.parse(s));
-
-            if(s.curToken().kind != TokenKind.commaToken){
+            if (s.curToken().kind != TokenKind.commaToken) {
                 break;
             }
             skip(s, TokenKind.commaToken);
         }
-
         skip(s, TokenKind.rightBraceToken);
 
         leaveParser("dict display");
-
         return adict;
     }
 
 
     @Override
-    void prettyPrint() {
+    public void prettyPrint() {
 
     }
 
     @Override
-    RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
+    public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         return null;
     }
 }

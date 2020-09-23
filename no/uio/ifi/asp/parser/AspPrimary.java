@@ -21,15 +21,12 @@ public class AspPrimary extends AspSyntax {
         enterParser("primary");
 
         AspPrimary ap = new AspPrimary(s.curLineNum());
-
         ap.atom = AspAtom.parse(s);
-
-        while(s.curToken().kind == leftParToken || s.curToken().kind == leftBracketToken){
+        while (s.curToken().kind == leftParToken || s.curToken().kind == leftBracketToken) {
             ap.primarySuffixes.add(AspPrimarySuffix.parse(s));
         }
 
         leaveParser("primary");
-
         return ap;
     }
 

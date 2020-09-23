@@ -17,21 +17,18 @@ public class AspSuite extends AspSyntax {
         super(n);
     }
 
-    public static AspSuite parse (Scanner s){
+    public static AspSuite parse(Scanner s) {
         enterParser("suite");
 
         AspSuite as = new AspSuite(s.curLineNum());
-
-        if(s.curToken().kind == newLineToken){
+        if (s.curToken().kind == newLineToken) {
             skip(s, newLineToken);
             skip(s, indentToken);
-
-            while(s.curToken().kind != dedentToken){
+            while (s.curToken().kind != dedentToken) {
                 as.exprs.add(AspExpr.parse(s));
             }
-
             skip(s, dedentToken);
-        } else{
+        } else {
             as.smallStmt = AspSmallStmt.parse(s);
         }
 

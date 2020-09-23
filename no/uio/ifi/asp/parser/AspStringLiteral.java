@@ -7,14 +7,15 @@ import no.uio.ifi.asp.scanner.Scanner;
 import no.uio.ifi.asp.scanner.TokenKind;
 
 public class AspStringLiteral extends AspAtom {
+
     AspStringLiteral(int n) {
         super(n);
     }
 
-    public static AspStringLiteral parse(Scanner s){
+    public static AspStringLiteral parse(Scanner s) {
         enterParser("String literal");
-        AspStringLiteral asl = new AspStringLiteral(s.curLineNum());
 
+        AspStringLiteral asl = new AspStringLiteral(s.curLineNum());
         skip(s, TokenKind.stringToken);
 
         leaveParser("String literal");
@@ -22,12 +23,12 @@ public class AspStringLiteral extends AspAtom {
     }
 
     @Override
-    void prettyPrint() {
+    public void prettyPrint() {
 
     }
 
     @Override
-    RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
+    public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         return null;
     }
 }
