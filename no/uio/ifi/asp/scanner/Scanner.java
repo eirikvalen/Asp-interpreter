@@ -317,29 +317,47 @@ public class Scanner {
 
     public boolean isCompOpr() {
         TokenKind k = curToken().kind;
-        //-- Must be changed in part 2:
-        return false;
+        EnumSet compOpr = EnumSet.of(
+                lessToken,
+                greaterToken,
+                doubleEqualToken,
+                lessEqualToken,
+                greaterEqualToken,
+                notEqualToken
+        );
+        return compOpr.contains(k);
     }
 
 
     public boolean isFactorPrefix() {
         TokenKind k = curToken().kind;
-        //-- Must be changed in part 2:
-        return false;
+        EnumSet factorPrefix = EnumSet.of(
+                plusToken,
+                minusToken
+        );
+        return factorPrefix.contains(k);
     }
 
 
     public boolean isFactorOpr() {
         TokenKind k = curToken().kind;
-        //-- Must be changed in part 2:
-        return false;
+        EnumSet factorPrefix = EnumSet.of(
+                plusToken,
+                minusToken
+        );
+        return factorPrefix.contains(k);
     }
 
 
     public boolean isTermOpr() {
         TokenKind k = curToken().kind;
-        //-- Must be changed in part 2:
-        return false;
+        EnumSet termOpr = EnumSet.of(
+                astToken,
+                slashToken,
+                percentToken,
+                doubleSlashToken
+        );
+        return termOpr.contains(k);
     }
 
 
