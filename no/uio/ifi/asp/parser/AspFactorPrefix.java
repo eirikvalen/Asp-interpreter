@@ -4,16 +4,15 @@ import no.uio.ifi.asp.runtime.RuntimeReturnValue;
 import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
-
-import static no.uio.ifi.asp.scanner.TokenKind.minusToken;
-import static no.uio.ifi.asp.scanner.TokenKind.plusToken;
+import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspFactorPrefix extends AspSyntax{
+
     AspFactorPrefix(int n) { super(n); }
 
     static AspFactorPrefix parse(Scanner s){
-        enterParser("pass stmt");
-        AspFactorPrefix aps = new AspFactorPrefix(s.curLineNum());
+        enterParser("factor prefix");
+        AspFactorPrefix afp = new AspFactorPrefix(s.curLineNum());
 
         switch(s.curToken().kind){
             case plusToken:
@@ -22,8 +21,8 @@ public class AspFactorPrefix extends AspSyntax{
                 skip(s,minusToken);
         }
 
-        leaveParser("pass stmt");
-        return aps;
+        leaveParser("factor prefix");
+        return afp;
     }
 
     @Override

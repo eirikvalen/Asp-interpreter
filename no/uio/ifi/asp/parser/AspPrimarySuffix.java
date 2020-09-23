@@ -7,12 +7,14 @@ import no.uio.ifi.asp.scanner.Scanner;
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public abstract class AspPrimarySuffix extends AspSyntax{
+
     AspPrimarySuffix(int n) {
         super(n);
     }
 
     static AspPrimarySuffix parse(Scanner s) {
         enterParser("primary suffix");
+
         AspPrimarySuffix aps = null;
 
         switch (s.curToken().kind){

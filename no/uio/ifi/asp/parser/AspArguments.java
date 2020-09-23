@@ -17,11 +17,10 @@ public class AspArguments extends AspPrimarySuffix {
 
     static AspArguments parse(Scanner s) {
         enterParser("arguments");
-        AspArguments aa = null;
+        AspArguments aa = new AspArguments(s.curLineNum());
 
         skip(s, leftParToken);
 
-        //TODO fix potensiell feil med komma på slutten uten expr (1,)
         if(s.curToken().kind != rightParToken){
             while(true){
                 aa.exprs.add(AspExpr.parse(s));

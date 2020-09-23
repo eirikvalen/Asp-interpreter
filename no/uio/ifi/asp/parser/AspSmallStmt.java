@@ -11,7 +11,7 @@ public abstract class AspSmallStmt extends AspSyntax {
 
     static AspSmallStmt parse(Scanner s){
         enterParser("small stmt");
-        AspSmallStmt ass = null;
+        AspSmallStmt ass;
 
         switch (s.curToken().kind){
             case returnToken:

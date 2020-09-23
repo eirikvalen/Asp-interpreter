@@ -7,16 +7,17 @@ import no.uio.ifi.asp.scanner.Scanner;
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspReturnStmt extends AspSmallStmt{
-    AspExpr ae;
+    AspExpr expr;
 
     AspReturnStmt(int n) { super(n); }
 
     static AspReturnStmt parse(Scanner s){
         enterParser("return stmt");
+
         AspReturnStmt ars = new AspReturnStmt(s.curLineNum());
 
         skip(s, returnToken);
-        ars.ae = AspExpr.parse(s);
+        ars.expr = AspExpr.parse(s);
 
         leaveParser("return stmt");
         return ars;

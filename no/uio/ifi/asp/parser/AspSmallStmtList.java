@@ -9,18 +9,17 @@ import java.util.ArrayList;
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspSmallStmtList extends AspStmt {
-    ArrayList<AspSmallStmt> sstmts = new ArrayList<>();
+    ArrayList<AspSmallStmt> smallStmts = new ArrayList<>();
 
     AspSmallStmtList(int n) { super(n); }
 
     public static AspSmallStmtList parse(Scanner s) {
-        enterParser("small statement list");
+        enterParser("small stmt list");
 
         AspSmallStmtList assm = new AspSmallStmtList(s.curLineNum());
 
         while(true){
-            assm.sstmts.add(AspSmallStmt.parse(s));
-            //TODO Funker dette sånn? skal man skippe når man sjekker kind?
+            assm.smallStmts.add(AspSmallStmt.parse(s));
             if(s.curToken().kind == semicolonToken){
                 skip(s, semicolonToken);
             }
@@ -30,7 +29,7 @@ public class AspSmallStmtList extends AspStmt {
             }
         }
 
-        leaveParser("small statement list");
+        leaveParser("small stmt list");
         return assm;
     }
 

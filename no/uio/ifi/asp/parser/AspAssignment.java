@@ -4,15 +4,13 @@ import no.uio.ifi.asp.runtime.RuntimeReturnValue;
 import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
-
 import java.util.ArrayList;
-
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspAssignment extends AspSmallStmt{
-    AspName an;
-    Arraylist<AspSubscription> as = new ArrayList<>();
-    AspExpr ae;
+    AspName name;
+    ArrayList<AspSubscription> subscriptions = new ArrayList<>();
+    AspExpr expr;
 
     AspAssignment(int n) { super(n); }
 
@@ -20,15 +18,15 @@ public class AspAssignment extends AspSmallStmt{
         enterParser("assignment");
         AspAssignment aa = new AspAssignment(s.curLineNum());
 
-        aa.an = AspName.parse(s);
+        aa.name = AspName.parse(s);
 
         while(s.curToken().kind != equalToken){
-            aa.as.add(AspSubscription.parse(s));
+            aa.subscriptions.add(AspSubscription.parse(s));
         }
 
         skip(s, equalToken);
 
-        aa.ae = AspExpr.parse(s);
+        aa.expr = AspExpr.parse(s);
 
         leaveParser("assignment");
         return aa;

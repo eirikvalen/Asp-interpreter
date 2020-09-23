@@ -6,23 +6,22 @@ import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
 
 import static no.uio.ifi.asp.scanner.TokenKind.*;
-import static no.uio.ifi.asp.scanner.TokenKind.notEqualToken;
 
 public class AspTermOpr extends AspSyntax{
     AspTermOpr(int n) { super(n); }
 
     static AspTermOpr parse(Scanner s){
-        enterParser("pass stmt");
+        enterParser("term opr");
         AspTermOpr aps = new AspTermOpr(s.curLineNum());
 
         switch(s.curToken().kind){
             case plusToken:
-                skip(s,plusToken);
+                skip(s, plusToken);
             case minusToken:
-                skip(s,minusToken);
+                skip(s, minusToken);
         }
 
-        leaveParser("pass stmt");
+        leaveParser("term opr");
         return aps;
     }
 

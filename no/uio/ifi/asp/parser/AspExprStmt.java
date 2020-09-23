@@ -6,18 +6,18 @@ import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
 
 public class AspExprStmt extends AspSmallStmt {
-    AspExpr ae;
+    AspExpr expr;
 
     AspExprStmt(int n) { super(n); }
 
     static AspExprStmt parse(Scanner s){
         enterParser("expr stmt");
-        AspExprStmt ars = new AspExprStmt(s.curLineNum());
+        AspExprStmt aes = new AspExprStmt(s.curLineNum());
 
-        ars.ae = AspExpr.parse(s);
+        aes.expr = AspExpr.parse(s);
 
         leaveParser("expr stmt");
-        return ars;
+        return aes;
     }
 
     @Override

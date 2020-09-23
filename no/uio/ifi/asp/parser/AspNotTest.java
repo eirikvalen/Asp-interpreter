@@ -7,20 +7,23 @@ import no.uio.ifi.asp.scanner.Scanner;
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspNotTest extends AspSyntax {
-    AspComparison comp;
+    AspComparison comparison;
 
     AspNotTest(int n) {
         super(n);
     }
+
     static AspNotTest parse(Scanner s) {
         enterParser("not test");
+
         AspNotTest ant = new AspNotTest(s.curLineNum());
 
         if(s.curToken().kind == notToken) skip(s, notToken);
 
-        ant.comp = AspComparison.parse(s);
+        ant.comparison = AspComparison.parse(s);
 
         leaveParser("not test");
+
         return ant;
     }
 

@@ -17,17 +17,17 @@ public class AspComparison extends AspSyntax {
         super(n);
     }
     static AspComparison parse(Scanner s) {
-        enterParser("comparison test");
-        AspComparison ant = new AspComparison(s.curLineNum());
+        enterParser("comparison");
+        AspComparison ac = new AspComparison(s.curLineNum());
 
         while (true){
-            ant.terms.add(AspTerm.parse(s));
+            ac.terms.add(AspTerm.parse(s));
             if(!s.isCompOpr()) break;
-            ant.compOprs.add(AspCompOpr.parse(s));
+            ac.compOprs.add(AspCompOpr.parse(s));
         }
 
-        leaveParser("comparison test");
-        return ant;
+        leaveParser("comparison");
+        return ac;
     }
 
     @Override

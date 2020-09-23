@@ -15,6 +15,7 @@ public class AspFactor extends AspSyntax{
     AspFactor(int n) {
         super(n);
     }
+
     static AspFactor parse(Scanner s) {
         enterParser("factor");
         AspFactor af = new AspFactor(s.curLineNum());

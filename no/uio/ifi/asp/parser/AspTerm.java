@@ -11,11 +11,11 @@ public class AspTerm extends AspSyntax{
     ArrayList<AspFactor> factors = new ArrayList<>();
     ArrayList<AspTermOpr> termOprs = new ArrayList<>();
 
-    AspTerm(int n) {
-        super(n);
-    }
+    AspTerm(int n) { super(n); }
+
     static AspTerm parse(Scanner s) {
-        enterParser("comparison test");
+        enterParser("term");
+
         AspTerm at = new AspTerm(s.curLineNum());
 
         while (true){
@@ -24,7 +24,7 @@ public class AspTerm extends AspSyntax{
             at.termOprs.add(AspTermOpr.parse(s));
         }
 
-        leaveParser("comparison test");
+        leaveParser("term");
         return at;
     }
 

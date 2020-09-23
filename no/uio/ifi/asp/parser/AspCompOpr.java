@@ -10,8 +10,8 @@ public class AspCompOpr extends AspSyntax {
     AspCompOpr(int n) { super(n); }
 
     static AspCompOpr parse(Scanner s){
-        enterParser("pass stmt");
-        AspCompOpr aps = new AspCompOpr(s.curLineNum());
+        enterParser("comp opr");
+        AspCompOpr aco = new AspCompOpr(s.curLineNum());
 
         switch(s.curToken().kind){
             case lessToken:
@@ -28,8 +28,8 @@ public class AspCompOpr extends AspSyntax {
                 skip(s,notEqualToken);
         }
 
-        leaveParser("pass stmt");
-        return aps;
+        leaveParser("comp opr");
+        return aco;
     }
 
     @Override

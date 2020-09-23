@@ -10,17 +10,16 @@ import java.util.ArrayList;
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public abstract class AspStmt extends AspSyntax{
-    ArrayList<AspStmt> stmts = new ArrayList<>();
 
     AspStmt(int n) {
         super(n);
     }
 
-
     public static AspStmt parse(Scanner s) {
-        enterParser("program");
+        enterParser("stmt");
 
-        AspStmt as = null;
+        AspStmt as;
+
         if (s.curToken().kind == forToken || s.curToken().kind == defToken || s.curToken().kind == ifToken || s.curToken().kind == whileToken){
             as = AspCompoundStmt.parse(s);
         }else{
@@ -28,7 +27,7 @@ public abstract class AspStmt extends AspSyntax{
         }
 
 
-        leaveParser("program");
+        leaveParser("stmt");
         return as;
     }
 
