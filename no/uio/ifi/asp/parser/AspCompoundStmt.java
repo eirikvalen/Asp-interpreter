@@ -17,7 +17,7 @@ public abstract class AspCompoundStmt extends AspStmt{
 
 
     public static AspCompoundStmt parse(Scanner s) {
-        enterParser("program");
+        enterParser("CompoundStatement");
 
         AspCompoundStmt acs = null;
 
@@ -37,14 +37,14 @@ public abstract class AspCompoundStmt extends AspStmt{
 
             default:
                 //TODO Endre message
-                parserError("compund statment error", s.curLineNum());
+                parserError("compound statment error", s.curLineNum());
 
 
         }
 
 
 
-        leaveParser("program");
+        leaveParser("CompoundStatement");
         return acs;
     }
 
