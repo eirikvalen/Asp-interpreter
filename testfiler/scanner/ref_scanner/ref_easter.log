@@ -1,0 +1,238 @@
+   1: # Finn 1. påskedag for årene 2020-2025.
+   2: 
+   3: M_name = [""] * (12+1)
+Scanner: name token on line 3: M_name
+Scanner: = token on line 3
+Scanner: [ token on line 3
+Scanner: string literal token on line 3: ""
+Scanner: ] token on line 3
+Scanner: * token on line 3
+Scanner: ( token on line 3
+Scanner: integer literal token on line 3: 12
+Scanner: + token on line 3
+Scanner: integer literal token on line 3: 1
+Scanner: ) token on line 3
+Scanner: NEWLINE token on line 3
+   4: M_name[3] = "mars";   M_name[4] = "april"
+Scanner: name token on line 4: M_name
+Scanner: [ token on line 4
+Scanner: integer literal token on line 4: 3
+Scanner: ] token on line 4
+Scanner: = token on line 4
+Scanner: string literal token on line 4: "mars"
+Scanner: ; token on line 4
+Scanner: name token on line 4: M_name
+Scanner: [ token on line 4
+Scanner: integer literal token on line 4: 4
+Scanner: ] token on line 4
+Scanner: = token on line 4
+Scanner: string literal token on line 4: "april"
+Scanner: NEWLINE token on line 4
+   5: 
+   6: for y in [2020, 2021, 2022, 2023, 2024, 2025]:
+Scanner: for token on line 6
+Scanner: name token on line 6: y
+Scanner: in token on line 6
+Scanner: [ token on line 6
+Scanner: integer literal token on line 6: 2020
+Scanner: , token on line 6
+Scanner: integer literal token on line 6: 2021
+Scanner: , token on line 6
+Scanner: integer literal token on line 6: 2022
+Scanner: , token on line 6
+Scanner: integer literal token on line 6: 2023
+Scanner: , token on line 6
+Scanner: integer literal token on line 6: 2024
+Scanner: , token on line 6
+Scanner: integer literal token on line 6: 2025
+Scanner: ] token on line 6
+Scanner: : token on line 6
+Scanner: NEWLINE token on line 6
+   7:    a = y % 19
+Scanner: INDENT token on line 7
+Scanner: name token on line 7: a
+Scanner: = token on line 7
+Scanner: name token on line 7: y
+Scanner: % token on line 7
+Scanner: integer literal token on line 7: 19
+Scanner: NEWLINE token on line 7
+   8:    b = y // 100
+Scanner: name token on line 8: b
+Scanner: = token on line 8
+Scanner: name token on line 8: y
+Scanner: // token on line 8
+Scanner: integer literal token on line 8: 100
+Scanner: NEWLINE token on line 8
+   9:    c = y % 100
+Scanner: name token on line 9: c
+Scanner: = token on line 9
+Scanner: name token on line 9: y
+Scanner: % token on line 9
+Scanner: integer literal token on line 9: 100
+Scanner: NEWLINE token on line 9
+  10:    d = b // 4
+Scanner: name token on line 10: d
+Scanner: = token on line 10
+Scanner: name token on line 10: b
+Scanner: // token on line 10
+Scanner: integer literal token on line 10: 4
+Scanner: NEWLINE token on line 10
+  11:    e = b % 4
+Scanner: name token on line 11: e
+Scanner: = token on line 11
+Scanner: name token on line 11: b
+Scanner: % token on line 11
+Scanner: integer literal token on line 11: 4
+Scanner: NEWLINE token on line 11
+  12:    f = (b+8) // 25
+Scanner: name token on line 12: f
+Scanner: = token on line 12
+Scanner: ( token on line 12
+Scanner: name token on line 12: b
+Scanner: + token on line 12
+Scanner: integer literal token on line 12: 8
+Scanner: ) token on line 12
+Scanner: // token on line 12
+Scanner: integer literal token on line 12: 25
+Scanner: NEWLINE token on line 12
+  13:    g = (b-f+1) // 3
+Scanner: name token on line 13: g
+Scanner: = token on line 13
+Scanner: ( token on line 13
+Scanner: name token on line 13: b
+Scanner: - token on line 13
+Scanner: name token on line 13: f
+Scanner: + token on line 13
+Scanner: integer literal token on line 13: 1
+Scanner: ) token on line 13
+Scanner: // token on line 13
+Scanner: integer literal token on line 13: 3
+Scanner: NEWLINE token on line 13
+  14:    h = (19*a+b-d-g+15) % 30
+Scanner: name token on line 14: h
+Scanner: = token on line 14
+Scanner: ( token on line 14
+Scanner: integer literal token on line 14: 19
+Scanner: * token on line 14
+Scanner: name token on line 14: a
+Scanner: + token on line 14
+Scanner: name token on line 14: b
+Scanner: - token on line 14
+Scanner: name token on line 14: d
+Scanner: - token on line 14
+Scanner: name token on line 14: g
+Scanner: + token on line 14
+Scanner: integer literal token on line 14: 15
+Scanner: ) token on line 14
+Scanner: % token on line 14
+Scanner: integer literal token on line 14: 30
+Scanner: NEWLINE token on line 14
+  15:    i = c // 4
+Scanner: name token on line 15: i
+Scanner: = token on line 15
+Scanner: name token on line 15: c
+Scanner: // token on line 15
+Scanner: integer literal token on line 15: 4
+Scanner: NEWLINE token on line 15
+  16:    k = c % 4
+Scanner: name token on line 16: k
+Scanner: = token on line 16
+Scanner: name token on line 16: c
+Scanner: % token on line 16
+Scanner: integer literal token on line 16: 4
+Scanner: NEWLINE token on line 16
+  17:    l = (32+2*e+2*i-h-k) % 7
+Scanner: name token on line 17: l
+Scanner: = token on line 17
+Scanner: ( token on line 17
+Scanner: integer literal token on line 17: 32
+Scanner: + token on line 17
+Scanner: integer literal token on line 17: 2
+Scanner: * token on line 17
+Scanner: name token on line 17: e
+Scanner: + token on line 17
+Scanner: integer literal token on line 17: 2
+Scanner: * token on line 17
+Scanner: name token on line 17: i
+Scanner: - token on line 17
+Scanner: name token on line 17: h
+Scanner: - token on line 17
+Scanner: name token on line 17: k
+Scanner: ) token on line 17
+Scanner: % token on line 17
+Scanner: integer literal token on line 17: 7
+Scanner: NEWLINE token on line 17
+  18:    m = (a+11*h+22*l) // 451
+Scanner: name token on line 18: m
+Scanner: = token on line 18
+Scanner: ( token on line 18
+Scanner: name token on line 18: a
+Scanner: + token on line 18
+Scanner: integer literal token on line 18: 11
+Scanner: * token on line 18
+Scanner: name token on line 18: h
+Scanner: + token on line 18
+Scanner: integer literal token on line 18: 22
+Scanner: * token on line 18
+Scanner: name token on line 18: l
+Scanner: ) token on line 18
+Scanner: // token on line 18
+Scanner: integer literal token on line 18: 451
+Scanner: NEWLINE token on line 18
+  19: 
+  20:    month = (h+l-7*m+114) // 31
+Scanner: name token on line 20: month
+Scanner: = token on line 20
+Scanner: ( token on line 20
+Scanner: name token on line 20: h
+Scanner: + token on line 20
+Scanner: name token on line 20: l
+Scanner: - token on line 20
+Scanner: integer literal token on line 20: 7
+Scanner: * token on line 20
+Scanner: name token on line 20: m
+Scanner: + token on line 20
+Scanner: integer literal token on line 20: 114
+Scanner: ) token on line 20
+Scanner: // token on line 20
+Scanner: integer literal token on line 20: 31
+Scanner: NEWLINE token on line 20
+  21:    day = (h+l-7*m+114) % 31 + 1
+Scanner: name token on line 21: day
+Scanner: = token on line 21
+Scanner: ( token on line 21
+Scanner: name token on line 21: h
+Scanner: + token on line 21
+Scanner: name token on line 21: l
+Scanner: - token on line 21
+Scanner: integer literal token on line 21: 7
+Scanner: * token on line 21
+Scanner: name token on line 21: m
+Scanner: + token on line 21
+Scanner: integer literal token on line 21: 114
+Scanner: ) token on line 21
+Scanner: % token on line 21
+Scanner: integer literal token on line 21: 31
+Scanner: + token on line 21
+Scanner: integer literal token on line 21: 1
+Scanner: NEWLINE token on line 21
+  22:    print(str(day) + ". " + M_name[month], y)
+Scanner: name token on line 22: print
+Scanner: ( token on line 22
+Scanner: name token on line 22: str
+Scanner: ( token on line 22
+Scanner: name token on line 22: day
+Scanner: ) token on line 22
+Scanner: + token on line 22
+Scanner: string literal token on line 22: ". "
+Scanner: + token on line 22
+Scanner: name token on line 22: M_name
+Scanner: [ token on line 22
+Scanner: name token on line 22: month
+Scanner: ] token on line 22
+Scanner: , token on line 22
+Scanner: name token on line 22: y
+Scanner: ) token on line 22
+Scanner: NEWLINE token on line 22
+Scanner: DEDENT token
+Scanner: E-o-f token

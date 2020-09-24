@@ -1,0 +1,330 @@
+   1: # Dette programmet leser norske fødelsnumre (11 sifre) og
+   2: # sjekker om kontrollsifrene er riktige.
+   3: 
+   4: vekter_1 = [ 3, 7, 6, 1, 8, 9, 4, 5, 2 ]
+Scanner: name token on line 4: vekter_1
+Scanner: = token on line 4
+Scanner: [ token on line 4
+Scanner: integer literal token on line 4: 3
+Scanner: , token on line 4
+Scanner: integer literal token on line 4: 7
+Scanner: , token on line 4
+Scanner: integer literal token on line 4: 6
+Scanner: , token on line 4
+Scanner: integer literal token on line 4: 1
+Scanner: , token on line 4
+Scanner: integer literal token on line 4: 8
+Scanner: , token on line 4
+Scanner: integer literal token on line 4: 9
+Scanner: , token on line 4
+Scanner: integer literal token on line 4: 4
+Scanner: , token on line 4
+Scanner: integer literal token on line 4: 5
+Scanner: , token on line 4
+Scanner: integer literal token on line 4: 2
+Scanner: ] token on line 4
+Scanner: NEWLINE token on line 4
+   5: vekter_2 = [ 5, 4, 3, 2, 7, 6, 5, 4, 3, 2 ]
+Scanner: name token on line 5: vekter_2
+Scanner: = token on line 5
+Scanner: [ token on line 5
+Scanner: integer literal token on line 5: 5
+Scanner: , token on line 5
+Scanner: integer literal token on line 5: 4
+Scanner: , token on line 5
+Scanner: integer literal token on line 5: 3
+Scanner: , token on line 5
+Scanner: integer literal token on line 5: 2
+Scanner: , token on line 5
+Scanner: integer literal token on line 5: 7
+Scanner: , token on line 5
+Scanner: integer literal token on line 5: 6
+Scanner: , token on line 5
+Scanner: integer literal token on line 5: 5
+Scanner: , token on line 5
+Scanner: integer literal token on line 5: 4
+Scanner: , token on line 5
+Scanner: integer literal token on line 5: 3
+Scanner: , token on line 5
+Scanner: integer literal token on line 5: 2
+Scanner: ] token on line 5
+Scanner: NEWLINE token on line 5
+   6: 
+   7: def sjekk_kontrollsiffer (n, vekter):
+Scanner: def token on line 7
+Scanner: name token on line 7: sjekk_kontrollsiffer
+Scanner: ( token on line 7
+Scanner: name token on line 7: n
+Scanner: , token on line 7
+Scanner: name token on line 7: vekter
+Scanner: ) token on line 7
+Scanner: : token on line 7
+Scanner: NEWLINE token on line 7
+   8:    sum = 0
+Scanner: INDENT token on line 8
+Scanner: name token on line 8: sum
+Scanner: = token on line 8
+Scanner: integer literal token on line 8: 0
+Scanner: NEWLINE token on line 8
+   9:    for i in range(0,n):
+Scanner: for token on line 9
+Scanner: name token on line 9: i
+Scanner: in token on line 9
+Scanner: name token on line 9: range
+Scanner: ( token on line 9
+Scanner: integer literal token on line 9: 0
+Scanner: , token on line 9
+Scanner: name token on line 9: n
+Scanner: ) token on line 9
+Scanner: : token on line 9
+Scanner: NEWLINE token on line 9
+  10:       sum = sum + vekter[i]*sifre[i]
+Scanner: INDENT token on line 10
+Scanner: name token on line 10: sum
+Scanner: = token on line 10
+Scanner: name token on line 10: sum
+Scanner: + token on line 10
+Scanner: name token on line 10: vekter
+Scanner: [ token on line 10
+Scanner: name token on line 10: i
+Scanner: ] token on line 10
+Scanner: * token on line 10
+Scanner: name token on line 10: sifre
+Scanner: [ token on line 10
+Scanner: name token on line 10: i
+Scanner: ] token on line 10
+Scanner: NEWLINE token on line 10
+  11:    return (sum+sifre[n])%11 == 0
+Scanner: DEDENT token on line 11
+Scanner: return token on line 11
+Scanner: ( token on line 11
+Scanner: name token on line 11: sum
+Scanner: + token on line 11
+Scanner: name token on line 11: sifre
+Scanner: [ token on line 11
+Scanner: name token on line 11: n
+Scanner: ] token on line 11
+Scanner: ) token on line 11
+Scanner: % token on line 11
+Scanner: integer literal token on line 11: 11
+Scanner: == token on line 11
+Scanner: integer literal token on line 11: 0
+Scanner: NEWLINE token on line 11
+  12: 
+  13: def kun_sifre (t):
+Scanner: DEDENT token on line 13
+Scanner: def token on line 13
+Scanner: name token on line 13: kun_sifre
+Scanner: ( token on line 13
+Scanner: name token on line 13: t
+Scanner: ) token on line 13
+Scanner: : token on line 13
+Scanner: NEWLINE token on line 13
+  14:    res = ""
+Scanner: INDENT token on line 14
+Scanner: name token on line 14: res
+Scanner: = token on line 14
+Scanner: string literal token on line 14: ""
+Scanner: NEWLINE token on line 14
+  15:    for i in range(0, len(t)):
+Scanner: for token on line 15
+Scanner: name token on line 15: i
+Scanner: in token on line 15
+Scanner: name token on line 15: range
+Scanner: ( token on line 15
+Scanner: integer literal token on line 15: 0
+Scanner: , token on line 15
+Scanner: name token on line 15: len
+Scanner: ( token on line 15
+Scanner: name token on line 15: t
+Scanner: ) token on line 15
+Scanner: ) token on line 15
+Scanner: : token on line 15
+Scanner: NEWLINE token on line 15
+  16:       c = t[i]
+Scanner: INDENT token on line 16
+Scanner: name token on line 16: c
+Scanner: = token on line 16
+Scanner: name token on line 16: t
+Scanner: [ token on line 16
+Scanner: name token on line 16: i
+Scanner: ] token on line 16
+Scanner: NEWLINE token on line 16
+  17:       if ('0' <= c and c <= '9'):
+Scanner: if token on line 17
+Scanner: ( token on line 17
+Scanner: string literal token on line 17: "0"
+Scanner: <= token on line 17
+Scanner: name token on line 17: c
+Scanner: and token on line 17
+Scanner: name token on line 17: c
+Scanner: <= token on line 17
+Scanner: string literal token on line 17: "9"
+Scanner: ) token on line 17
+Scanner: : token on line 17
+Scanner: NEWLINE token on line 17
+  18:          res = res + c  # Ta vare på desimale sifre
+Scanner: INDENT token on line 18
+Scanner: name token on line 18: res
+Scanner: = token on line 18
+Scanner: name token on line 18: res
+Scanner: + token on line 18
+Scanner: name token on line 18: c
+Scanner: NEWLINE token on line 18
+  19:       else:
+Scanner: DEDENT token on line 19
+Scanner: else token on line 19
+Scanner: : token on line 19
+Scanner: NEWLINE token on line 19
+  20:          pass  # Ignorer alle andre tegn
+Scanner: INDENT token on line 20
+Scanner: pass token on line 20
+Scanner: NEWLINE token on line 20
+  21:    return res
+Scanner: DEDENT token on line 21
+Scanner: DEDENT token on line 21
+Scanner: return token on line 21
+Scanner: name token on line 21: res
+Scanner: NEWLINE token on line 21
+  22: 
+  23: while True:
+Scanner: DEDENT token on line 23
+Scanner: while token on line 23
+Scanner: True token on line 23
+Scanner: : token on line 23
+Scanner: NEWLINE token on line 23
+  24:    fnr = kun_sifre(input("Fødselsnummer: "))
+Scanner: INDENT token on line 24
+Scanner: name token on line 24: fnr
+Scanner: = token on line 24
+Scanner: name token on line 24: kun_sifre
+Scanner: ( token on line 24
+Scanner: name token on line 24: input
+Scanner: ( token on line 24
+Scanner: string literal token on line 24: "Fødselsnummer: "
+Scanner: ) token on line 24
+Scanner: ) token on line 24
+Scanner: NEWLINE token on line 24
+  25:    if fnr == "": exit(0)
+Scanner: if token on line 25
+Scanner: name token on line 25: fnr
+Scanner: == token on line 25
+Scanner: string literal token on line 25: ""
+Scanner: : token on line 25
+Scanner: name token on line 25: exit
+Scanner: ( token on line 25
+Scanner: integer literal token on line 25: 0
+Scanner: ) token on line 25
+Scanner: NEWLINE token on line 25
+  26: 
+  27:    if len(fnr) != 11:
+Scanner: if token on line 27
+Scanner: name token on line 27: len
+Scanner: ( token on line 27
+Scanner: name token on line 27: fnr
+Scanner: ) token on line 27
+Scanner: != token on line 27
+Scanner: integer literal token on line 27: 11
+Scanner: : token on line 27
+Scanner: NEWLINE token on line 27
+  28:       print(fnr, "har ikke 11 sifre!")
+Scanner: INDENT token on line 28
+Scanner: name token on line 28: print
+Scanner: ( token on line 28
+Scanner: name token on line 28: fnr
+Scanner: , token on line 28
+Scanner: string literal token on line 28: "har ikke 11 sifre!"
+Scanner: ) token on line 28
+Scanner: NEWLINE token on line 28
+  29:    else:
+Scanner: DEDENT token on line 29
+Scanner: else token on line 29
+Scanner: : token on line 29
+Scanner: NEWLINE token on line 29
+  30:       sifre = [0] * 11;
+Scanner: INDENT token on line 30
+Scanner: name token on line 30: sifre
+Scanner: = token on line 30
+Scanner: [ token on line 30
+Scanner: integer literal token on line 30: 0
+Scanner: ] token on line 30
+Scanner: * token on line 30
+Scanner: integer literal token on line 30: 11
+Scanner: ; token on line 30
+Scanner: NEWLINE token on line 30
+  31:       for i in range(0, 11): 
+Scanner: for token on line 31
+Scanner: name token on line 31: i
+Scanner: in token on line 31
+Scanner: name token on line 31: range
+Scanner: ( token on line 31
+Scanner: integer literal token on line 31: 0
+Scanner: , token on line 31
+Scanner: integer literal token on line 31: 11
+Scanner: ) token on line 31
+Scanner: : token on line 31
+Scanner: NEWLINE token on line 31
+  32:          sifre[i] = int(fnr[i])
+Scanner: INDENT token on line 32
+Scanner: name token on line 32: sifre
+Scanner: [ token on line 32
+Scanner: name token on line 32: i
+Scanner: ] token on line 32
+Scanner: = token on line 32
+Scanner: name token on line 32: int
+Scanner: ( token on line 32
+Scanner: name token on line 32: fnr
+Scanner: [ token on line 32
+Scanner: name token on line 32: i
+Scanner: ] token on line 32
+Scanner: ) token on line 32
+Scanner: NEWLINE token on line 32
+  33:       if sjekk_kontrollsiffer(9,vekter_1) and sjekk_kontrollsiffer(10,vekter_2):
+Scanner: DEDENT token on line 33
+Scanner: if token on line 33
+Scanner: name token on line 33: sjekk_kontrollsiffer
+Scanner: ( token on line 33
+Scanner: integer literal token on line 33: 9
+Scanner: , token on line 33
+Scanner: name token on line 33: vekter_1
+Scanner: ) token on line 33
+Scanner: and token on line 33
+Scanner: name token on line 33: sjekk_kontrollsiffer
+Scanner: ( token on line 33
+Scanner: integer literal token on line 33: 10
+Scanner: , token on line 33
+Scanner: name token on line 33: vekter_2
+Scanner: ) token on line 33
+Scanner: : token on line 33
+Scanner: NEWLINE token on line 33
+  34:          print("Fødselsnummer", fnr, "er OK.")
+Scanner: INDENT token on line 34
+Scanner: name token on line 34: print
+Scanner: ( token on line 34
+Scanner: string literal token on line 34: "Fødselsnummer"
+Scanner: , token on line 34
+Scanner: name token on line 34: fnr
+Scanner: , token on line 34
+Scanner: string literal token on line 34: "er OK."
+Scanner: ) token on line 34
+Scanner: NEWLINE token on line 34
+  35:       else:
+Scanner: DEDENT token on line 35
+Scanner: else token on line 35
+Scanner: : token on line 35
+Scanner: NEWLINE token on line 35
+  36:          print("Fødselsnummer", fnr, "har feil i kontrollsiffer.")
+Scanner: INDENT token on line 36
+Scanner: name token on line 36: print
+Scanner: ( token on line 36
+Scanner: string literal token on line 36: "Fødselsnummer"
+Scanner: , token on line 36
+Scanner: name token on line 36: fnr
+Scanner: , token on line 36
+Scanner: string literal token on line 36: "har feil i kontrollsiffer."
+Scanner: ) token on line 36
+Scanner: NEWLINE token on line 36
+Scanner: DEDENT token
+Scanner: DEDENT token
+Scanner: DEDENT token
+Scanner: E-o-f token
