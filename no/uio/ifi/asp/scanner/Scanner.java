@@ -63,6 +63,13 @@ public class Scanner {
         try {
             line = sourceFile.readLine();
             if (line == null) {
+                for(int indent : indents){
+                    if(indent>0){
+                        Token t = new Token(dedentToken);
+                        curLineTokens.add(t);
+                        Main.log.noteToken(t);
+                    }
+                }
                 Token t = new Token(eofToken);
                 curLineTokens.add(t);
                 Main.log.noteToken(t);
@@ -84,15 +91,15 @@ public class Scanner {
             return;
         }
 
-        makeTokens(indentCount, line);
+        makeTokens(line);
 
         for (Token tok : curLineTokens) {
             Main.log.noteToken(tok);
         }
     }
 
-    private void makeTokens(int indentCount, String line){
-        int pos = indentCount;
+    private void makeTokens(String line){
+        int pos = 0;
         Token t = null;
         StringBuilder sb = new StringBuilder();
 
@@ -224,15 +231,13 @@ public class Scanner {
     }
 
     private void addIntToken(StringBuilder sb, Token t){
-        if(sb.toString().charAt(0) == '0'){
-            Token zero = new Token(integerToken);
+        if(sb.toString().charAt(0) == '0' && sb.length() > 1){
+            Token zero = new Token(integerToken, curLineNum());
             zero.integerLit = 0;
             curLineTokens.add(zero);
         }
-        if(sb.length() > 1){
-            t.integerLit = Integer.parseInt(sb.toString());
-            addToken(sb, t);
-        }
+        t.integerLit = Integer.parseInt(sb.toString());
+        addToken(sb, t);
     }
 
     private void addStringToken(StringBuilder sb, Token t){
