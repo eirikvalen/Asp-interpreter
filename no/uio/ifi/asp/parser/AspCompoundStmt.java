@@ -16,7 +16,7 @@ public abstract class AspCompoundStmt extends AspStmt {
     }
 
     public static AspCompoundStmt parse(Scanner s) {
-        enterParser("CompoundStatement");
+        enterParser("compound stmt");
 
         AspCompoundStmt acs = null;
         switch (s.curToken().kind) {
@@ -37,7 +37,7 @@ public abstract class AspCompoundStmt extends AspStmt {
                         s.curToken().kind + "!", s.curLineNum());
         }
 
-        leaveParser("CompoundStatement");
+        leaveParser("compound stmt");
         return acs;
     }
 

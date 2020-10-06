@@ -20,8 +20,10 @@ public abstract class AspPrimarySuffix extends AspSyntax {
         switch (s.curToken().kind) {
             case leftParToken:
                 aps = AspArguments.parse(s);
+                break;
             case leftBracketToken:
                 aps = AspSubscription.parse(s);
+                break;
         }
 
         leaveParser("primary suffix");

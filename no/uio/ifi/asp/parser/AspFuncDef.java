@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class AspFuncDef extends AspCompoundStmt {
 
-    ArrayList<AspName> names;
+    ArrayList<AspName> names = new ArrayList<>();
     AspSuite body;
 
     AspFuncDef(int n) {
@@ -19,15 +19,15 @@ public class AspFuncDef extends AspCompoundStmt {
 
         AspFuncDef afd = new AspFuncDef(s.curLineNum());
 
+        skip(s, TokenKind.defToken);
         afd.names.add(AspName.parse(s));
         skip(s, TokenKind.leftParToken);
 
-        while (true) {
+        while (s.curToken().kind != TokenKind.rightParToken) {
             afd.names.add(AspName.parse(s));
-            if (s.curToken().kind != TokenKind.commaToken) {
-                break;
+            if (s.curToken().kind == TokenKind.commaToken) {
+                skip(s, TokenKind.commaToken);
             }
-            skip(s, TokenKind.commaToken);
         }
 
         skip(s, TokenKind.rightParToken);

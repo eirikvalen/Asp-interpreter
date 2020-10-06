@@ -20,12 +20,16 @@ public class AspFactorOpr extends AspSyntax {
         switch (s.curToken().kind) {
             case astToken:
                 skip(s, astToken);
+                break;
             case slashToken:
                 skip(s, slashToken);
+                break;
             case percentToken:
                 skip(s, percentToken);
+                break;
             case doubleSlashToken:
                 skip(s, doubleSlashToken);
+                break;
         }
 
         leaveParser("factor opr");

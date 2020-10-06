@@ -18,8 +18,10 @@ public class AspFactorPrefix extends AspSyntax {
         switch (s.curToken().kind) {
             case plusToken:
                 skip(s, plusToken);
+                break;
             case minusToken:
                 skip(s, minusToken);
+                break;
         }
 
         leaveParser("factor prefix");

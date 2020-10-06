@@ -19,16 +19,22 @@ public class AspCompOpr extends AspSyntax {
         switch (s.curToken().kind) {
             case lessToken:
                 skip(s, lessToken);
+                break;
             case greaterToken:
                 skip(s, greaterToken);
+                break;
             case doubleEqualToken:
                 skip(s, doubleEqualToken);
+                break;
             case greaterEqualToken:
                 skip(s, greaterEqualToken);
+                break;
             case lessEqualToken:
                 skip(s, lessEqualToken);
+                break;
             case notEqualToken:
                 skip(s, notEqualToken);
+                break;
         }
 
         leaveParser("comp opr");

@@ -16,7 +16,7 @@ public class AspWhileStmt extends AspCompoundStmt {
     }
 
     public static AspWhileStmt parse(Scanner s) {
-        enterParser("while");
+        enterParser("while stmt");
 
         AspWhileStmt aws = new AspWhileStmt(s.curLineNum());
         skip(s, TokenKind.whileToken);
@@ -24,7 +24,7 @@ public class AspWhileStmt extends AspCompoundStmt {
         skip(s, TokenKind.colonToken);
         aws.body = AspSuite.parse(s);
 
-        leaveParser("while");
+        leaveParser("while stmt");
         return aws;
     }
 }

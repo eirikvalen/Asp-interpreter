@@ -12,7 +12,7 @@ public class AspIntegerLiteral extends AspAtom {
     }
     
     public static AspIntegerLiteral parse(Scanner s) {
-        enterParser("Integer literal");
+        enterParser("integer literal");
 
         AspIntegerLiteral ail = new AspIntegerLiteral(s.curLineNum());
         skip(s, TokenKind.integerToken);

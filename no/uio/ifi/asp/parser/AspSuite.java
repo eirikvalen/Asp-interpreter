@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspSuite extends AspSyntax {
-    ArrayList<AspExpr> exprs = new ArrayList<>();
-    AspSmallStmt smallStmt;
+    ArrayList<AspStmt> stmts = new ArrayList<>();
+    AspSmallStmtList smallStmtList;
 
     AspSuite(int n) {
         super(n);
@@ -25,11 +25,11 @@ public class AspSuite extends AspSyntax {
             skip(s, newLineToken);
             skip(s, indentToken);
             while (s.curToken().kind != dedentToken) {
-                as.exprs.add(AspExpr.parse(s));
+                as.stmts.add(AspStmt.parse(s));
             }
             skip(s, dedentToken);
         } else {
-            as.smallStmt = AspSmallStmt.parse(s);
+            as.smallStmtList = AspSmallStmtList.parse(s);
         }
 
         leaveParser("suite");

@@ -347,8 +347,10 @@ public class Scanner {
     public boolean isFactorOpr() {
         TokenKind k = curToken().kind;
         EnumSet factorPrefix = EnumSet.of(
-                plusToken,
-                minusToken
+                astToken,
+                slashToken,
+                percentToken,
+                doubleSlashToken
         );
         return factorPrefix.contains(k);
     }
@@ -357,10 +359,8 @@ public class Scanner {
     public boolean isTermOpr() {
         TokenKind k = curToken().kind;
         EnumSet termOpr = EnumSet.of(
-                astToken,
-                slashToken,
-                percentToken,
-                doubleSlashToken
+                plusToken,
+                minusToken
         );
         return termOpr.contains(k);
     }
