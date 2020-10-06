@@ -52,15 +52,4 @@ abstract class AspAtom extends AspSyntax {
         leaveParser("atom");
         return aa;
     }
-
-    @Override
-    public void prettyPrint() {
-
-    }
-
-    @Override
-    public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-
-        return null;
-    }
 }

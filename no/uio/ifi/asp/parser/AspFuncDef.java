@@ -1,6 +1,5 @@
 package no.uio.ifi.asp.parser;
 
-import com.sun.org.apache.bcel.internal.classfile.ConstantLong;
 import no.uio.ifi.asp.scanner.Scanner;
 import no.uio.ifi.asp.scanner.TokenKind;
 
