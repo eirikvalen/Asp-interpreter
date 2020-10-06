@@ -10,7 +10,7 @@ import static no.uio.ifi.asp.scanner.TokenKind.*;
 public class AspNotTest extends AspSyntax {
 
     AspComparison comparison;
-    Boolean not;
+    Boolean not = false;
 
     AspNotTest(int n) {
         super(n);

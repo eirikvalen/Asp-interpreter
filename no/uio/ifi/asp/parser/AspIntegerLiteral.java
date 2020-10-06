@@ -4,11 +4,12 @@ import no.uio.ifi.asp.runtime.RuntimeReturnValue;
 import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
+import no.uio.ifi.asp.scanner.Token;
 import no.uio.ifi.asp.scanner.TokenKind;
 
 public class AspIntegerLiteral extends AspAtom {
 
-    TokenKind integerLiteral;
+    Token integerLiteral;
 
     AspIntegerLiteral(int n) {
         super(n);
@@ -18,7 +19,7 @@ public class AspIntegerLiteral extends AspAtom {
         enterParser("integer literal");
 
         AspIntegerLiteral ail = new AspIntegerLiteral(s.curLineNum());
-        ail.integerLiteral = s.curToken().kind;
+        ail.integerLiteral = s.curToken();
 
         skip(s, TokenKind.integerToken);
 
@@ -28,7 +29,7 @@ public class AspIntegerLiteral extends AspAtom {
 
     @Override
     public void prettyPrint() {
-        prettyWrite(integerLiteral.toString());
+        prettyWrite(Long.toString(integerLiteral.integerLit));
     }
 
     @Override

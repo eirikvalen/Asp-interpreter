@@ -4,11 +4,12 @@ import no.uio.ifi.asp.runtime.RuntimeReturnValue;
 import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
+import no.uio.ifi.asp.scanner.Token;
 import no.uio.ifi.asp.scanner.TokenKind;
 
 public class AspFloatLiteral extends AspAtom {
 
-    TokenKind floatLiteral;
+    Token floatLiteral;
 
     AspFloatLiteral(int n) {
         super(n);
@@ -18,7 +19,7 @@ public class AspFloatLiteral extends AspAtom {
         enterParser("float literal");
 
         AspFloatLiteral afl = new AspFloatLiteral(s.curLineNum());
-        afl.floatLiteral = s.curToken().kind;
+        afl.floatLiteral = s.curToken();
 
         skip(s, TokenKind.floatToken);
 
@@ -28,7 +29,7 @@ public class AspFloatLiteral extends AspAtom {
 
     @Override
     public void prettyPrint() {
-        prettyWrite(floatLiteral.toString());
+        prettyWrite(Double.toString(floatLiteral.floatLit));
     }
 
     @Override

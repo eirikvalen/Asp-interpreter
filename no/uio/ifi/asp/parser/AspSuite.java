@@ -41,11 +41,13 @@ public class AspSuite extends AspSyntax {
         if (smallStmtList != null){
             smallStmtList.prettyPrint();
         }else{
+            System.out.println("Statements: " + stmts);
             prettyWriteLn();
             prettyIndent();
             for(AspStmt stmt : stmts){
                 stmt.prettyPrint();
             }
+            prettyDedent();
         }
 
     }
