@@ -31,11 +31,6 @@ public abstract class AspPrimarySuffix extends AspSyntax {
     }
 
     @Override
-    void prettyPrint() {
-
-    }
-
-    @Override
     RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         return null;
     }

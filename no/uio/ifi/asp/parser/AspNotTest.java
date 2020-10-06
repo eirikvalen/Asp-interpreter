@@ -10,6 +10,7 @@ import static no.uio.ifi.asp.scanner.TokenKind.*;
 public class AspNotTest extends AspSyntax {
 
     AspComparison comparison;
+    Boolean not;
 
     AspNotTest(int n) {
         super(n);
@@ -19,7 +20,10 @@ public class AspNotTest extends AspSyntax {
         enterParser("not test");
 
         AspNotTest ant = new AspNotTest(s.curLineNum());
-        if (s.curToken().kind == notToken) skip(s, notToken);
+        if (s.curToken().kind == notToken){
+            ant.not = true;
+            skip(s, notToken);
+        }
         ant.comparison = AspComparison.parse(s);
 
         leaveParser("not test");
@@ -28,7 +32,8 @@ public class AspNotTest extends AspSyntax {
 
     @Override
     void prettyPrint() {
-
+        if (not) prettyWrite("not ");
+        comparison.prettyPrint();
     }
 
     @Override

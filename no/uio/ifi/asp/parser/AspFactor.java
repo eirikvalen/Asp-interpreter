@@ -23,6 +23,7 @@ public class AspFactor extends AspSyntax {
         AspFactor af = new AspFactor(s.curLineNum());
         while (true) {
             if (s.isFactorPrefix()) af.factorPrefixes.add(AspFactorPrefix.parse(s));
+            else af.factorPrefixes.add(null);
             af.primarys.add(AspPrimary.parse(s));
             if (!s.isFactorOpr()) break;
             af.factorOprs.add(AspFactorOpr.parse(s));
@@ -34,7 +35,16 @@ public class AspFactor extends AspSyntax {
 
     @Override
     void prettyPrint() {
-
+        for(int i = 0; i<primarys.size(); i++){
+            AspFactorPrefix factorPrefix = factorPrefixes.get(i);
+            if(factorPrefix != null){
+                factorPrefix.prettyPrint();
+            }
+            primarys.get(i).prettyPrint();
+            if(i != factorOprs.size()){
+                factorOprs.get(i).prettyPrint();
+            }
+        }
     }
 
     @Override

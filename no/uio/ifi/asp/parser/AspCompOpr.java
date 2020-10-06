@@ -4,10 +4,14 @@ import no.uio.ifi.asp.runtime.RuntimeReturnValue;
 import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
+import no.uio.ifi.asp.scanner.TokenKind;
 
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspCompOpr extends AspSyntax {
+
+    TokenKind compOpr;
+
     AspCompOpr(int n) {
         super(n);
     }
@@ -16,6 +20,8 @@ public class AspCompOpr extends AspSyntax {
         enterParser("comp opr");
 
         AspCompOpr aco = new AspCompOpr(s.curLineNum());
+        aco.compOpr = s.curToken().kind;
+
         switch (s.curToken().kind) {
             case lessToken:
                 skip(s, lessToken);
@@ -43,7 +49,7 @@ public class AspCompOpr extends AspSyntax {
 
     @Override
     void prettyPrint() {
-
+        prettyWrite(" " + compOpr.toString() + " ");
     }
 
     @Override

@@ -7,6 +7,9 @@ import no.uio.ifi.asp.scanner.Scanner;
 import no.uio.ifi.asp.scanner.TokenKind;
 
 public class AspIntegerLiteral extends AspAtom {
+
+    TokenKind integerLiteral;
+
     AspIntegerLiteral(int n) {
         super(n);
     }
@@ -15,6 +18,8 @@ public class AspIntegerLiteral extends AspAtom {
         enterParser("integer literal");
 
         AspIntegerLiteral ail = new AspIntegerLiteral(s.curLineNum());
+        ail.integerLiteral = s.curToken().kind;
+
         skip(s, TokenKind.integerToken);
 
         leaveParser("integer literal");
@@ -23,7 +28,7 @@ public class AspIntegerLiteral extends AspAtom {
 
     @Override
     public void prettyPrint() {
-
+        prettyWrite(integerLiteral.toString());
     }
 
     @Override
