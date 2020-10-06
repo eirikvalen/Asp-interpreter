@@ -38,6 +38,15 @@ public class AspSuite extends AspSyntax {
 
     @Override
     void prettyPrint() {
+        if (smallStmtList != null){
+            smallStmtList.prettyPrint();
+        }else{
+            prettyWriteLn();
+            prettyIndent();
+            for(AspStmt stmt : stmts){
+                stmt.prettyPrint();
+            }
+        }
 
     }
 

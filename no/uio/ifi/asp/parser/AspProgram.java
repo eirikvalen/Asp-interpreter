@@ -24,6 +24,7 @@ public class AspProgram extends AspSyntax {
              ap.stmts.add(AspStmt.parse(s));
         }
 
+        skip(s, eofToken);
         leaveParser("program");
         return ap;
     }
@@ -31,7 +32,9 @@ public class AspProgram extends AspSyntax {
 
     @Override
     public void prettyPrint() {
-        //-- Must be changed in part 2:
+       for (AspStmt stmt : stmts){
+           stmt.prettyPrint();
+       }
     }
 
 

@@ -27,4 +27,14 @@ public class AspForStmt extends AspCompoundStmt {
         leaveParser("for stmt");
         return afs;
     }
+
+    @Override
+    public void prettyPrint() {
+        prettyWrite("for ");
+        name.prettyPrint();
+        prettyWrite("in ");
+        expression.prettyPrint();
+        prettyWrite(":");
+        suite.prettyPrint();
+    }
 }

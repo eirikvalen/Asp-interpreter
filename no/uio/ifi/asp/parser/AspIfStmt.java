@@ -42,4 +42,25 @@ public class AspIfStmt extends AspCompoundStmt {
         leaveParser("if stmt");
         return ais;
     }
+
+    @Override
+    public void prettyPrint() {
+        prettyWrite("if ");
+        for(int i = 0; i < expressions.size(); i++){
+
+            if(i > 0){
+                prettyWrite("elif ");
+            }
+
+            expressions.get(i).prettyPrint();
+            prettyWrite(": ");
+            suites.get(i).prettyPrint();
+        }
+
+        if(suites.size() > expressions.size()){
+            prettyWrite("else: ");
+            suites.get(suites.size()-1).prettyPrint();
+        }
+
+    }
 }

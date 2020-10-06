@@ -4,6 +4,7 @@ import no.uio.ifi.asp.runtime.RuntimeReturnValue;
 import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
+import no.uio.ifi.asp.scanner.TokenKind;
 
 public abstract class AspSmallStmt extends AspSyntax {
 
@@ -32,13 +33,4 @@ public abstract class AspSmallStmt extends AspSyntax {
         return ass;
     }
 
-    @Override
-    void prettyPrint() {
-
-    }
-
-    @Override
-    RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-        return null;
-    }
 }
