@@ -4,10 +4,13 @@ import no.uio.ifi.asp.runtime.RuntimeReturnValue;
 import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
+import no.uio.ifi.asp.scanner.TokenKind;
 
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspFactorOpr extends AspSyntax {
+
+    TokenKind factorOpr;
 
     AspFactorOpr(int n) {
         super(n);
@@ -17,6 +20,8 @@ public class AspFactorOpr extends AspSyntax {
         enterParser("factor opr");
 
         AspFactorOpr afo = new AspFactorOpr(s.curLineNum());
+        afo.factorOpr = s.curToken().kind;
+
         switch (s.curToken().kind) {
             case astToken:
                 skip(s, astToken);
@@ -38,7 +43,7 @@ public class AspFactorOpr extends AspSyntax {
 
     @Override
     void prettyPrint() {
-
+        prettyWrite(factorOpr.toString());
     }
 
     @Override

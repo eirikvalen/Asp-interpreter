@@ -40,7 +40,16 @@ public class AspDictDisplay extends AspAtom {
 
     @Override
     public void prettyPrint() {
-
+        prettyWrite("{");
+        for(int i = 0; i<stringLits.size(); i++){
+            if(i != 0){
+                prettyWrite(", ");
+            }
+            stringLits.get(i).prettyPrint();
+            prettyWrite(": ");
+            expressions.get(i).prettyPrint();
+        }
+        prettyWrite("}");
     }
 
     @Override
