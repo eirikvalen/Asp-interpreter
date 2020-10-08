@@ -7,8 +7,6 @@ import no.uio.ifi.asp.scanner.Scanner;
 
 import java.util.ArrayList;
 
-import static no.uio.ifi.asp.scanner.TokenKind.notToken;
-
 public class AspComparison extends AspSyntax {
     ArrayList<AspTerm> terms = new ArrayList<>();
     ArrayList<AspCompOpr> compOprs = new ArrayList<>();
@@ -33,9 +31,9 @@ public class AspComparison extends AspSyntax {
 
     @Override
     void prettyPrint() {
-        for(int i = 0; i<terms.size(); i++){
+        for (int i = 0; i < terms.size(); i++) {
             terms.get(i).prettyPrint();
-            if(i != compOprs.size()){
+            if (i != compOprs.size()) {
                 compOprs.get(i).prettyPrint();
             }
         }

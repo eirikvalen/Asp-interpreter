@@ -33,7 +33,7 @@ public class AspPrimary extends AspSyntax {
     @Override
     void prettyPrint() {
         atom.prettyPrint();
-        for(AspPrimarySuffix aps: primarySuffixes){
+        for (AspPrimarySuffix aps : primarySuffixes) {
             aps.prettyPrint();
         }
     }

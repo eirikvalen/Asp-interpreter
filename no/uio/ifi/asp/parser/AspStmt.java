@@ -5,8 +5,6 @@ import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
 
-import java.util.ArrayList;
-
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public abstract class AspStmt extends AspSyntax {
@@ -27,11 +25,6 @@ public abstract class AspStmt extends AspSyntax {
 
         leaveParser("stmt");
         return as;
-    }
-
-    @Override
-    public void prettyPrint() {
-
     }
 
     @Override

@@ -11,7 +11,9 @@ public class AspReturnStmt extends AspSmallStmt {
 
     AspExpr expr;
 
-    AspReturnStmt(int n) { super(n); }
+    AspReturnStmt(int n) {
+        super(n);
+    }
 
     static AspReturnStmt parse(Scanner s) {
         enterParser("return stmt");

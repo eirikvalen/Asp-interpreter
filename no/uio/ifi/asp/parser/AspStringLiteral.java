@@ -14,8 +14,6 @@ public class AspStringLiteral extends AspAtom {
         super(n);
     }
 
-
-
     public static AspStringLiteral parse(Scanner s) {
         enterParser("string literal");
 
@@ -24,14 +22,13 @@ public class AspStringLiteral extends AspAtom {
 
         skip(s, TokenKind.stringToken);
 
-
         leaveParser("string literal");
         return asl;
     }
 
     @Override
     public void prettyPrint() {
-        prettyWrite( "\"" +  stringLit + "\"");
+        prettyWrite("\"" + stringLit + "\"");
     }
 
     @Override

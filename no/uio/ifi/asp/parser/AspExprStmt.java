@@ -9,7 +9,9 @@ public class AspExprStmt extends AspSmallStmt {
 
     AspExpr expr;
 
-    AspExprStmt(int n) { super(n); }
+    AspExprStmt(int n) {
+        super(n);
+    }
 
     static AspExprStmt parse(Scanner s) {
         enterParser("expr stmt");

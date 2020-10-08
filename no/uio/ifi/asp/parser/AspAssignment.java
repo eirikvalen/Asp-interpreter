@@ -15,7 +15,9 @@ public class AspAssignment extends AspSmallStmt {
     ArrayList<AspSubscription> subscriptions = new ArrayList<>();
     AspExpr expr;
 
-    AspAssignment(int n) { super(n); }
+    AspAssignment(int n) {
+        super(n);
+    }
 
     static AspAssignment parse(Scanner s) {
         enterParser("assignment");
@@ -35,7 +37,7 @@ public class AspAssignment extends AspSmallStmt {
     @Override
     void prettyPrint() {
         name.prettyPrint();
-        for(AspSubscription sub : subscriptions){
+        for (AspSubscription sub : subscriptions) {
             sub.prettyPrint();
         }
         prettyWrite(" = ");

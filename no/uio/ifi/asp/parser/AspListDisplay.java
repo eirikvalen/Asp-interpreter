@@ -31,7 +31,7 @@ public class AspListDisplay extends AspAtom {
             }
         }
         skip(s, TokenKind.rightBracketToken);
-        
+
         leaveParser("list display");
         return ald;
     }
@@ -40,8 +40,8 @@ public class AspListDisplay extends AspAtom {
     public void prettyPrint() {
         int nPrinted = 0;
         prettyWrite("[");
-        for(AspExpr expr: exprs){
-            if(nPrinted>0){
+        for (AspExpr expr : exprs) {
+            if (nPrinted > 0) {
                 prettyWrite(", ");
             }
             expr.prettyPrint();

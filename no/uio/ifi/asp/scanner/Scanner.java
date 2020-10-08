@@ -1,7 +1,6 @@
 package no.uio.ifi.asp.scanner;
 
 import java.io.*;
-import java.math.BigDecimal;
 import java.util.*;
 
 import no.uio.ifi.asp.main.*;

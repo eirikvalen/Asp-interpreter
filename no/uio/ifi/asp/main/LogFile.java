@@ -112,7 +112,7 @@ public class LogFile {
     public void prettyWrite(String s) {
         if (prettyLine.equals("")) {
             for (int i = 1; i <= prettyIndentation; i++)
-                prettyLine += "  ";
+                prettyLine += "    ";
         }
         prettyLine += s;
     }

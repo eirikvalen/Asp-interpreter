@@ -13,7 +13,7 @@ public class Main {
 
     public static LogFile log = null;
 
-    public static void main(String arg[]) {
+    public static void main(String[] arg) {
         String fileName = null, baseFilename = null;
         boolean testExpr = false, testParser = false, testScanner = false,
                 logE = false, logP = false, logS = false, logY = false;

@@ -39,8 +39,8 @@ public class AspArguments extends AspPrimarySuffix {
     void prettyPrint() {
         int nPrinted = 0;
         prettyWrite("(");
-        for(AspExpr expr: exprs){
-            if(nPrinted != 0){
+        for (AspExpr expr : exprs) {
+            if (nPrinted != 0) {
                 prettyWrite(", ");
             }
             expr.prettyPrint();

@@ -31,25 +31,22 @@ public class AspSuite extends AspSyntax {
         } else {
             as.smallStmtList = AspSmallStmtList.parse(s);
         }
-
         leaveParser("suite");
         return as;
     }
 
     @Override
     void prettyPrint() {
-        if (smallStmtList != null){
+        if (smallStmtList != null) {
             smallStmtList.prettyPrint();
-        }else{
-            System.out.println("Statements: " + stmts);
+        } else {
             prettyWriteLn();
             prettyIndent();
-            for(AspStmt stmt : stmts){
+            for (AspStmt stmt : stmts) {
                 stmt.prettyPrint();
             }
             prettyDedent();
         }
-
     }
 
     @Override

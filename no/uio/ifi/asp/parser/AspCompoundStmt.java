@@ -1,13 +1,9 @@
-package no.uio.ifi.asp
-        .parser;
+package no.uio.ifi.asp.parser;
 
 import no.uio.ifi.asp.runtime.RuntimeReturnValue;
 import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
-
-import static no.uio.ifi.asp.scanner.TokenKind.*;
-import static no.uio.ifi.asp.scanner.TokenKind.whileToken;
 
 public abstract class AspCompoundStmt extends AspStmt {
 
@@ -41,10 +37,8 @@ public abstract class AspCompoundStmt extends AspStmt {
         return acs;
     }
 
-
     @Override
     public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-
         return null;
     }
 }

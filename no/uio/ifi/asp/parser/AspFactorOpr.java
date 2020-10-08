@@ -43,7 +43,7 @@ public class AspFactorOpr extends AspSyntax {
 
     @Override
     void prettyPrint() {
-        prettyWrite(factorOpr.toString());
+        prettyWrite(" " + factorOpr.toString() + " ");
     }
 
     @Override

@@ -12,7 +12,9 @@ public class AspFactorPrefix extends AspSyntax {
 
     TokenKind factorPrefix;
 
-    AspFactorPrefix(int n) { super(n); }
+    AspFactorPrefix(int n) {
+        super(n);
+    }
 
     static AspFactorPrefix parse(Scanner s) {
         enterParser("factor prefix");

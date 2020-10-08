@@ -4,11 +4,12 @@ import no.uio.ifi.asp.runtime.RuntimeReturnValue;
 import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
-import no.uio.ifi.asp.scanner.TokenKind;
 
 public abstract class AspSmallStmt extends AspSyntax {
 
-    AspSmallStmt(int n) { super(n); }
+    AspSmallStmt(int n) {
+        super(n);
+    }
 
     static AspSmallStmt parse(Scanner s) {
         enterParser("small stmt");

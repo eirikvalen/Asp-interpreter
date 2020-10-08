@@ -12,7 +12,9 @@ public class AspTerm extends AspSyntax {
     ArrayList<AspFactor> factors = new ArrayList<>();
     ArrayList<AspTermOpr> termOprs = new ArrayList<>();
 
-    AspTerm(int n) { super(n); }
+    AspTerm(int n) {
+        super(n);
+    }
 
     static AspTerm parse(Scanner s) {
         enterParser("term");
@@ -30,9 +32,9 @@ public class AspTerm extends AspSyntax {
 
     @Override
     void prettyPrint() {
-        for(int i = 0; i<factors.size(); i++){
+        for (int i = 0; i < factors.size(); i++) {
             factors.get(i).prettyPrint();
-            if(i != termOprs.size()){
+            if (i != termOprs.size()) {
                 termOprs.get(i).prettyPrint();
             }
         }

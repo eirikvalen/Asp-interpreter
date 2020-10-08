@@ -10,8 +10,6 @@ public class AspIfStmt extends AspCompoundStmt {
     ArrayList<AspExpr> expressions = new ArrayList<>();
     ArrayList<AspSuite> suites = new ArrayList<>();
 
-    //TODO sjekke om vi trenger to lister til hver suite?
-
     AspIfStmt(int n) {
         super(n);
     }
@@ -46,21 +44,18 @@ public class AspIfStmt extends AspCompoundStmt {
     @Override
     public void prettyPrint() {
         prettyWrite("if ");
-        for(int i = 0; i < expressions.size(); i++){
-
-            if(i > 0){
+        for (int i = 0; i < expressions.size(); i++) {
+            if (i > 0) {
                 prettyWrite("elif ");
             }
-
             expressions.get(i).prettyPrint();
             prettyWrite(": ");
             suites.get(i).prettyPrint();
         }
-
-        if(suites.size() > expressions.size()){
+        if (suites.size() > expressions.size()) {
             prettyWrite("else: ");
-            suites.get(suites.size()-1).prettyPrint();
+            suites.get(suites.size() - 1).prettyPrint();
         }
-
     }
 }
+

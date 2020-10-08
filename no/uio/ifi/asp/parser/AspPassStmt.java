@@ -9,7 +9,9 @@ import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspPassStmt extends AspSmallStmt {
 
-    AspPassStmt(int n) { super(n); }
+    AspPassStmt(int n) {
+        super(n);
+    }
 
     static AspPassStmt parse(Scanner s) {
         enterParser("pass stmt");
@@ -23,7 +25,7 @@ public class AspPassStmt extends AspSmallStmt {
 
     @Override
     void prettyPrint() {
-        prettyWriteLn("pass");
+        prettyWrite("pass");
     }
 
     @Override

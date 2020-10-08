@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class AspFuncDef extends AspCompoundStmt {
 
     ArrayList<AspName> names = new ArrayList<>();
-    AspSuite body;
+    AspSuite suite;
 
     AspFuncDef(int n) {
         super(n);
@@ -33,13 +33,11 @@ public class AspFuncDef extends AspCompoundStmt {
         skip(s, TokenKind.rightParToken);
         skip(s, TokenKind.colonToken);
 
-        afd.body = AspSuite.parse(s);
-
+        afd.suite = AspSuite.parse(s);
 
         leaveParser("func def");
 
         return afd;
-
     }
 
     @Override
@@ -48,15 +46,14 @@ public class AspFuncDef extends AspCompoundStmt {
         names.get(0).prettyPrint();
         prettyWrite("(");
 
-        for(int i = 1; i < names.size(); i++){
-            if( i != 1){
-                prettyWrite(",");
+        for (int i = 1; i < names.size(); i++) {
+            if (i != 1) {
+                prettyWrite(", ");
             }
-
             names.get(i).prettyPrint();
         }
         prettyWrite("):");
-        body.prettyPrint();
-        prettyDedent();
+        suite.prettyPrint();
+        prettyWriteLn();
     }
 }

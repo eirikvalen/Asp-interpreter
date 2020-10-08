@@ -4,7 +4,6 @@ import no.uio.ifi.asp.runtime.RuntimeReturnValue;
 import no.uio.ifi.asp.runtime.RuntimeScope;
 import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
-import no.uio.ifi.asp.scanner.TokenKind;
 
 import java.util.ArrayList;
 
@@ -14,7 +13,9 @@ public class AspSmallStmtList extends AspStmt {
 
     ArrayList<AspSmallStmt> smallStmts = new ArrayList<>();
 
-    AspSmallStmtList(int n) { super(n); }
+    AspSmallStmtList(int n) {
+        super(n);
+    }
 
     public static AspSmallStmtList parse(Scanner s) {
         enterParser("small stmt list");
@@ -30,27 +31,27 @@ public class AspSmallStmtList extends AspStmt {
                 break;
             }
         }
-
         leaveParser("small stmt list");
         return assm;
     }
 
-
     @Override
     public void prettyPrint() {
-
-        for(AspSmallStmt smallStmt : smallStmts){
+        int nPrinted = 0;
+        for (AspSmallStmt smallStmt : smallStmts) {
+            if (nPrinted > 0) {
+                prettyWrite(";");
+            }
+            nPrinted++;
             smallStmt.prettyPrint();
-            prettyWrite(";");
+
         }
         prettyWriteLn();
     }
-
 
     @Override
     public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         //-- Must be changed in part 3:
         return null;
     }
-
 }

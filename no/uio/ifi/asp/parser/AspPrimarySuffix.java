@@ -25,7 +25,6 @@ public abstract class AspPrimarySuffix extends AspSyntax {
                 aps = AspSubscription.parse(s);
                 break;
         }
-
         leaveParser("primary suffix");
         return aps;
     }
