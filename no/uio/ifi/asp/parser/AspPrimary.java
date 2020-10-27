@@ -1,8 +1,6 @@
 package no.uio.ifi.asp.parser;
 
-import no.uio.ifi.asp.runtime.RuntimeReturnValue;
-import no.uio.ifi.asp.runtime.RuntimeScope;
-import no.uio.ifi.asp.runtime.RuntimeValue;
+import no.uio.ifi.asp.runtime.*;
 import no.uio.ifi.asp.scanner.Scanner;
 
 import java.util.ArrayList;
@@ -40,6 +38,13 @@ public class AspPrimary extends AspSyntax {
 
     @Override
     RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-        return null;
+        RuntimeValue v = atom.eval(curScope);
+        for(int i = 0; i< primarySuffixes.size(); i++){
+            if(v instanceof RuntimeDictValue || v instanceof RuntimeListValue){
+                v = v.evalSubscription(primarySuffixes.get(i).eval(curScope), this);
+            }
+        }
+
+        return v;
     }
 }

@@ -9,7 +9,6 @@ import no.uio.ifi.asp.scanner.TokenKind;
 import static no.uio.ifi.asp.scanner.TokenKind.*;
 
 public class AspCompOpr extends AspSyntax {
-
     TokenKind compOpr;
 
     AspCompOpr(int n) {
