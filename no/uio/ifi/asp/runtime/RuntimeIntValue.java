@@ -166,6 +166,7 @@ public class RuntimeIntValue extends RuntimeValue {
         } else if (v instanceof RuntimeIntValue) {
             return new RuntimeBoolValue(intValue == v.getIntValue("== operand", where));
         }
+
         runtimeError("Type error for ==.", where);
         return null;  // Required by the compiler
     }

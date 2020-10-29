@@ -3,37 +3,38 @@ package no.uio.ifi.asp.runtime;
 import no.uio.ifi.asp.parser.AspSyntax;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class RuntimeDictValue extends RuntimeValue {
-    boolean boolValue;
+    HashMap<String, RuntimeValue> dictValue;
 
-    public RuntimeDictValue(boolean v) {
-        boolValue = v;
+    public RuntimeDictValue(HashMap<String, RuntimeValue> v) {
+        dictValue = v;
     }
 
 
     @Override
     protected String typeName() {
-        return "boolean";
+        return "dictionary";
     }
 
 
     @Override
     protected String showInfo(ArrayList<RuntimeValue> inUse, boolean toPrint) {
-        return (boolValue ? "True" : "False");
+        return dictValue.toString();
     }
 
 
     @Override
     public boolean getBoolValue(String what, AspSyntax where) {
-        return boolValue;
+        return !dictValue.isEmpty();
     }
 
 
     @Override
     public RuntimeValue evalEqual(RuntimeValue v, AspSyntax where) {
         if (v instanceof RuntimeNoneValue) {
-            return new RuntimeDictValue(false);
+            return new RuntimeBoolValue(false);
         }
         runtimeError("Type error for ==.", where);
         return null;  // Required by the compiler
@@ -42,16 +43,25 @@ public class RuntimeDictValue extends RuntimeValue {
 
     @Override
     public RuntimeValue evalNot(AspSyntax where) {
-        return new RuntimeDictValue(!boolValue);
+        return new RuntimeBoolValue(! this.getBoolValue("not operand", where));
     }
 
 
     @Override
     public RuntimeValue evalNotEqual(RuntimeValue v, AspSyntax where) {
         if (v instanceof RuntimeNoneValue) {
-            return new RuntimeDictValue(true);
+            return new RuntimeBoolValue(true);
         }
         runtimeError("Type error for !=.", where);
+        return null;  // Required by the compiler
+    }
+
+    @Override
+    public RuntimeValue evalSubscription(RuntimeValue v, AspSyntax where) {
+        if (v instanceof RuntimeStringValue){
+            return dictValue.get(v.getStringValue("subscription",where));
+        }
+        runtimeError("Type error for subscription.", where);
         return null;  // Required by the compiler
     }
 }

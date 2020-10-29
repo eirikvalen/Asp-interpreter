@@ -34,7 +34,7 @@ public class AspExpr extends AspSyntax {
 
         for (AspAndTest aat : andTests) {
             if (nPrinted > 0) {
-                prettyWrite(" or");
+                prettyWrite(" or ");
             }
             aat.prettyPrint();
             nPrinted++;

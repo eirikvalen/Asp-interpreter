@@ -46,6 +46,7 @@ public class AspComparison extends AspSyntax {
         RuntimeValue v = terms.get(0).eval(curScope);
         for (int i = 1; i < terms.size(); ++i){
             TokenKind k = compOprs.get(i-1).compOpr;
+            v = terms.get(i-1).eval(curScope);
             switch (k) {
                 case lessToken:
                     v = v.evalLess(terms.get(i).eval(curScope), this);
@@ -68,6 +69,10 @@ public class AspComparison extends AspSyntax {
                 default:
                     Main.panic("Illegal comparison operator: " + k + "!");
             }
+             if (!v.getBoolValue("comparison operator", this)){
+                 return v;
+             }
+
         }
         return v;
     }

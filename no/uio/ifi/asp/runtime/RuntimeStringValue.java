@@ -106,6 +106,15 @@ public class RuntimeStringValue extends RuntimeValue {
     }
 
     @Override
+    public RuntimeValue evalSubscription(RuntimeValue v, AspSyntax where) {
+        if (v instanceof RuntimeIntValue){
+            return new RuntimeStringValue(Character.toString(strValue.charAt((int) v.getIntValue("subscription", where))));
+        }
+        runtimeError("Type error for subscription", where);
+        return null;  // Required by the compiler
+    }
+
+    @Override
     public RuntimeValue evalNot(AspSyntax where) {
         return new RuntimeBoolValue(!this.getBoolValue("not operand", where));
     }
