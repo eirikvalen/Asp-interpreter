@@ -39,7 +39,11 @@ public class RuntimeListValue extends RuntimeValue {
     @Override
     public RuntimeValue evalSubscription(RuntimeValue v, AspSyntax where) {
        if (v instanceof RuntimeIntValue){
-           return listValue.get((int) v.getIntValue("subscription", where));
+           int index = (int) v.getIntValue("subscription", where);
+           if (index >= listValue.size() || index < 0){
+               runtimeError("List index " + index + " is out of range!", where);
+           }
+           return listValue.get(index);
        }
         runtimeError("Type error for subscription.", where);
         return null; // Required by the compiler

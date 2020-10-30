@@ -49,7 +49,6 @@ public class AspFactor extends AspSyntax {
         }
     }
 
-    // TODO vurder a fikse
     @Override
     RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         RuntimeValue v = primarys.get(0).eval(curScope);

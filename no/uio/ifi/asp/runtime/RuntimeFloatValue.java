@@ -182,7 +182,4 @@ public class RuntimeFloatValue extends RuntimeValue {
     public RuntimeValue evalNot(AspSyntax where) {
         return new RuntimeBoolValue(!this.getBoolValue("not operand", where));
     }
-
-
-
 }

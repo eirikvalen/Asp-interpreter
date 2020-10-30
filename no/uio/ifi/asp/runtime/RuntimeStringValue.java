@@ -20,8 +20,8 @@ public class RuntimeStringValue extends RuntimeValue {
 
     @Override
     protected String showInfo(ArrayList<RuntimeValue> inUse, boolean toPrint) {
-        if (strValue.contains("'")) return '"' + strValue + '"';
-        else return "'" + strValue + "'";
+        if (strValue.contains("\"")) return "'" + strValue + "'";
+        else return '"' + strValue + '"';
     }
 
     @Override
@@ -91,6 +91,8 @@ public class RuntimeStringValue extends RuntimeValue {
     public RuntimeValue evalEqual(RuntimeValue v, AspSyntax where) {
         if (v instanceof RuntimeStringValue){
             return new RuntimeBoolValue(strValue.equals(v.getStringValue("== operand", where)));
+        } else if (v instanceof RuntimeNoneValue){
+            return new RuntimeBoolValue(false);
         }
         runtimeError("Type error for ==.", where);
         return null;  // Required by the compiler
@@ -100,6 +102,8 @@ public class RuntimeStringValue extends RuntimeValue {
     public RuntimeValue evalNotEqual(RuntimeValue v, AspSyntax where) {
         if (v instanceof RuntimeStringValue){
             return new RuntimeBoolValue(!strValue.equals(v.getStringValue("!= operand", where)));
+        } else if (v instanceof RuntimeNoneValue){
+            return new RuntimeBoolValue(true);
         }
         runtimeError("Type error for !=.", where);
         return null;  // Required by the compiler
@@ -108,6 +112,10 @@ public class RuntimeStringValue extends RuntimeValue {
     @Override
     public RuntimeValue evalSubscription(RuntimeValue v, AspSyntax where) {
         if (v instanceof RuntimeIntValue){
+            int index = (int) v.getIntValue("subscription", where);
+            if (index >= strValue.length() || index < 0){
+                runtimeError("String index " + index + " is out of range!", where);
+            }
             return new RuntimeStringValue(Character.toString(strValue.charAt((int) v.getIntValue("subscription", where))));
         }
         runtimeError("Type error for subscription", where);

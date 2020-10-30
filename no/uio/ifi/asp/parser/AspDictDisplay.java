@@ -6,6 +6,7 @@ import no.uio.ifi.asp.scanner.TokenKind;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class AspDictDisplay extends AspAtom {
 
@@ -53,7 +54,7 @@ public class AspDictDisplay extends AspAtom {
 
     @Override
     public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-        HashMap<String, RuntimeValue> values = new HashMap<>();
+        LinkedHashMap<String, RuntimeValue> values = new LinkedHashMap<>();
 
         for(int i = 0; i < stringLits.size(); i++){
             values.put(stringLits.get(i).stringLit, expressions.get(i).eval(curScope));

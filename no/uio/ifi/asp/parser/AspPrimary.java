@@ -40,7 +40,7 @@ public class AspPrimary extends AspSyntax {
     RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         RuntimeValue v = atom.eval(curScope);
         for(int i = 0; i< primarySuffixes.size(); i++){
-            if(v instanceof RuntimeDictValue || v instanceof RuntimeListValue){
+            if(v instanceof RuntimeDictValue || v instanceof RuntimeListValue || v instanceof RuntimeStringValue){
                 v = v.evalSubscription(primarySuffixes.get(i).eval(curScope), this);
             }
         }

@@ -3,12 +3,13 @@ package no.uio.ifi.asp.runtime;
 import no.uio.ifi.asp.parser.AspSyntax;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Set;
 
 public class RuntimeDictValue extends RuntimeValue {
-    HashMap<String, RuntimeValue> dictValue;
+    LinkedHashMap<String, RuntimeValue> dictValue;
 
-    public RuntimeDictValue(HashMap<String, RuntimeValue> v) {
+    public RuntimeDictValue(LinkedHashMap<String, RuntimeValue> v) {
         dictValue = v;
     }
 
@@ -21,7 +22,15 @@ public class RuntimeDictValue extends RuntimeValue {
 
     @Override
     protected String showInfo(ArrayList<RuntimeValue> inUse, boolean toPrint) {
-        return dictValue.toString();
+        StringBuilder s = new StringBuilder("{");
+        for(String key: dictValue.keySet()){
+            s.append('"').append(key).append('"').append(": ").append(dictValue.get(key)).append(", ");
+        }
+        if(s.length() > 1){
+            s.delete(s.length()-2, s.length());
+        }
+        s.append("}");
+        return s.toString();
     }
 
 
@@ -59,6 +68,10 @@ public class RuntimeDictValue extends RuntimeValue {
     @Override
     public RuntimeValue evalSubscription(RuntimeValue v, AspSyntax where) {
         if (v instanceof RuntimeStringValue){
+            String key = v.getStringValue("subscription", where);
+            if (!dictValue.containsKey(key)){
+                runtimeError("Dictionary key '" + key + "' is undefined!", where);
+            }
             return dictValue.get(v.getStringValue("subscription",where));
         }
         runtimeError("Type error for subscription.", where);
