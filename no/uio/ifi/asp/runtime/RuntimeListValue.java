@@ -11,6 +11,10 @@ public class RuntimeListValue extends RuntimeValue {
         listValue = v;
     }
 
+    public ArrayList<RuntimeValue> getListValue(){
+        return listValue;
+    }
+
 
     @Override
     protected String typeName() {
@@ -81,5 +85,10 @@ public class RuntimeListValue extends RuntimeValue {
         }
         runtimeError("Type error for !=.", where);
         return null;  // Required by the compiler
+    }
+
+    @Override
+    public void evalAssignElem(RuntimeValue inx, RuntimeValue val, AspSyntax where) {
+        listValue.set((int) inx.getIntValue("assign element", where), val);
     }
 }

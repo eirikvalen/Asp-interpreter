@@ -1,13 +1,5 @@
-#En hyggelig hilsen
+liste = [1, 1, 2, 3]
+tabell = {"Ingen": [], "Fib": liste}
+kombi = [0, tabell]
 
-for i in a(
-    if 5 > 4:
-        return True
-            else:
-        return False
-        return False
-
-
-1
-;
-!
+x = kombi[1]["Fib"][2]

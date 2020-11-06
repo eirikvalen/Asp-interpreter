@@ -26,9 +26,4 @@ public abstract class AspStmt extends AspSyntax {
         leaveParser("stmt");
         return as;
     }
-
-    @Override
-    public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-        return null;
-    }
 }

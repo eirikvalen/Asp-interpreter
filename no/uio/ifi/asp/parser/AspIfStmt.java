@@ -1,5 +1,8 @@
 package no.uio.ifi.asp.parser;
 
+import no.uio.ifi.asp.runtime.RuntimeReturnValue;
+import no.uio.ifi.asp.runtime.RuntimeScope;
+import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
 import no.uio.ifi.asp.scanner.TokenKind;
 
@@ -56,6 +59,23 @@ public class AspIfStmt extends AspCompoundStmt {
             prettyWrite("else: ");
             suites.get(suites.size() - 1).prettyPrint();
         }
+    }
+
+    @Override
+    public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
+        for(int i=0; i < expressions.size(); i++){
+            RuntimeValue t = expressions.get(i).eval(curScope);
+            trace("if");
+            if (t.getBoolValue("if test", this)){
+                suites.get(i).eval(curScope);
+                break;
+            }
+        }
+        if(suites.size() > expressions.size()) {
+            trace("else:");
+            suites.get(suites.size()-1).eval(curScope);
+        }
+        return null;
     }
 }
 
