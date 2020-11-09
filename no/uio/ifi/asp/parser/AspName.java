@@ -35,4 +35,8 @@ public class AspName extends AspAtom {
     public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
         return curScope.find(name, this);
     }
+
+    public String getName(){
+        return name;
+    }
 }

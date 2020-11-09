@@ -29,8 +29,4 @@ public abstract class AspPrimarySuffix extends AspSyntax {
         return aps;
     }
 
-    @Override
-    RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
-        return null;
-    }
 }

@@ -1,13 +1,30 @@
 package no.uio.ifi.asp.runtime;
 
+import no.uio.ifi.asp.parser.AspFuncDef;
+import no.uio.ifi.asp.parser.AspName;
+import no.uio.ifi.asp.parser.AspSuite;
 import no.uio.ifi.asp.parser.AspSyntax;
 
 import java.util.ArrayList;
 
 public class RuntimeFuncValue extends RuntimeValue {
+    AspFuncDef def;
+    RuntimeScope defScope;
+    String name;
+
+    public RuntimeFuncValue(String def){
+        this.name = def;
+    }
+
+    public RuntimeFuncValue(AspFuncDef def, RuntimeScope defScope){
+        this.def = def;
+        this.defScope = defScope;
+    }
+
+
     @Override
     protected String typeName() {
-        return "None";
+        return "Function";
     }
 
 
@@ -16,27 +33,24 @@ public class RuntimeFuncValue extends RuntimeValue {
         return "None";
     }
 
-
     @Override
-    public boolean getBoolValue(String what, AspSyntax where) {
-        return false;
-    }
+    public RuntimeValue evalFuncCall(ArrayList<RuntimeValue> actualParams, AspSyntax where) {
+        ArrayList<AspName> formalParameters = def.getFormalParameters();
 
+        if (actualParams.size() != formalParameters.size()){
+            runtimeError("Wrong number of arguments: Expected " + formalParameters.size(), where);
+        }
+        RuntimeScope newScope = new RuntimeScope(defScope);
 
-    @Override
-    public RuntimeValue evalEqual(RuntimeValue v, AspSyntax where) {
-        return new RuntimeBoolValue(v instanceof RuntimeFuncValue);
-    }
+        for(int i = 0; i < actualParams.size(); i++){
+            newScope.assign(formalParameters.get(i).getName(), actualParams.get(i));
+        }
 
-
-    @Override
-    public RuntimeValue evalNot(AspSyntax where) {
-        return new RuntimeBoolValue(true);
-    }
-
-
-    @Override
-    public RuntimeValue evalNotEqual(RuntimeValue v, AspSyntax where) {
-        return new RuntimeBoolValue(!(v instanceof RuntimeFuncValue));
+        try{
+            def.evalSuite(newScope);
+        } catch (RuntimeReturnValue e){
+            return e.value;
+        }
+        return new RuntimeNoneValue();
     }
 }

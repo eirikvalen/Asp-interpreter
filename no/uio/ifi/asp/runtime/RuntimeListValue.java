@@ -91,4 +91,9 @@ public class RuntimeListValue extends RuntimeValue {
     public void evalAssignElem(RuntimeValue inx, RuntimeValue val, AspSyntax where) {
         listValue.set((int) inx.getIntValue("assign element", where), val);
     }
+
+    @Override
+    public RuntimeValue evalLen(AspSyntax where) {
+        return new RuntimeIntValue(listValue.size());
+    }
 }
