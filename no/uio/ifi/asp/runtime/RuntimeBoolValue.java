@@ -30,11 +30,6 @@ public class RuntimeBoolValue extends RuntimeValue {
         return boolValue;
     }
 
-    @Override
-    public String getStringValue(String what, AspSyntax where) {
-        return Boolean.toString(boolValue);
-    }
-
 
     @Override
     public RuntimeValue evalEqual(RuntimeValue v, AspSyntax where) {

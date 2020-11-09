@@ -35,12 +35,6 @@ public class RuntimeListValue extends RuntimeValue {
     }
 
     @Override
-    public String getStringValue(String what, AspSyntax where) {
-        return listValue.toString();
-    }
-
-
-    @Override
     public RuntimeValue evalNot(AspSyntax where) {
         return new RuntimeBoolValue(!this.getBoolValue("not operand", where));
     }
