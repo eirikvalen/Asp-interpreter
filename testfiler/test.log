@@ -1,0 +1,2 @@
+Trace line 1: Call function int with params ['1.0']
+Asp runtime error on line 1: String '1.0' is not a legal int
