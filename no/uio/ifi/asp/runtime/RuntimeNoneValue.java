@@ -23,6 +23,11 @@ public class RuntimeNoneValue extends RuntimeValue {
         return false;
     }
 
+    @Override
+    public String getStringValue(String what, AspSyntax where) {
+        return "None";
+    }
+
 
     @Override
     public RuntimeValue evalEqual(RuntimeValue v, AspSyntax where) {
