@@ -264,7 +264,7 @@ public class Scanner {
     private int findIndentCount(String line){
         int n = findIndent(expandLeadingTabs(line));
 
-        if(line.trim().isEmpty() || line.startsWith("#")){
+        if(line.trim().isEmpty() || line.trim().startsWith("#")){
             return -1;
         }
 

@@ -1,0 +1,51 @@
+Trace line 5: def pow
+Trace line 14: def rough_log
+Trace line 22: def sqrt
+Trace line 37: Call function input with parameters ["Give a number: "]
+Trace line 37: Call function float with parameters ["4"]
+Trace line 37: v = 4.0
+Trace line 38: Call function sqrt with parameters [4.0]
+Trace line 23: x = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Trace line 25: Call function rough_log with parameters [4.0]
+Trace line 19: return 1
+Trace line 25: d = 1
+Trace line 26: if True alt #1
+Trace line 27: Call function pow with parameters [20, 0]
+Trace line 6: if True alt #2
+Trace line 9: Call function pow with parameters [20, 1]
+Trace line 6: else:
+Trace line 11: return 20
+Trace line 9: return 1
+Trace line 27: x[0] = 1
+Trace line 31: Call function range with parameters [0, 11]
+Trace line 31: for #1: ix = 0
+Trace line 32: x[1] = 2.5
+Trace line 31: for #2: ix = 1
+Trace line 32: x[2] = 2.05
+Trace line 31: for #3: ix = 2
+Trace line 32: x[3] = 2.000609756097561
+Trace line 31: for #4: ix = 3
+Trace line 32: x[4] = 2.0000000929222947
+Trace line 31: for #5: ix = 4
+Trace line 32: x[5] = 2.000000000000002
+Trace line 31: for #6: ix = 5
+Trace line 32: x[6] = 2.0
+Trace line 31: for #7: ix = 6
+Trace line 32: x[7] = 2.0
+Trace line 31: for #8: ix = 7
+Trace line 32: x[8] = 2.0
+Trace line 31: for #9: ix = 8
+Trace line 32: x[9] = 2.0
+Trace line 31: for #10: ix = 9
+Trace line 32: x[10] = 2.0
+Trace line 31: for #11: ix = 10
+Trace line 32: x[11] = 2.0
+Trace line 34: return 2.0
+Trace line 38: sq2 = 2.0
+Trace line 39: Call function pow with parameters [2.0, 2]
+Trace line 6: if True alt #1
+Trace line 7: Call function pow with parameters [2.0, 1]
+Trace line 6: else:
+Trace line 11: return 2.0
+Trace line 7: return 4.0
+Trace line 39: Call function print with parameters [2.0, "squared is", 4.0]

@@ -13,6 +13,13 @@ c = int("1")
 #    print(a[i])
 
 def f(x):
-    return x*x
+    h = g(x)
+    return h*h
 
-f(2,2)
+def g(x):
+    #hei
+    return x + 2
+
+print(f(2))
+
+a = {}

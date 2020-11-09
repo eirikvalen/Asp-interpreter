@@ -28,9 +28,9 @@ public class RuntimeLibrary extends RuntimeScope {
             public RuntimeValue evalFuncCall(ArrayList<RuntimeValue> actualParams, AspSyntax where) {
                 for (int i = 0; i < actualParams.size(); ++i) {
                     if (i > 0) System.out.print(" ");
-                    System.out.println(actualParams.get(i).toString());
+                    System.out.print(actualParams.get(i).toString());
                 }
-                //System.out.println();
+                System.out.println();
                 return new RuntimeNoneValue();
             }
         });

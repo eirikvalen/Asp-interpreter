@@ -46,6 +46,7 @@ public class AspPrimary extends AspSyntax {
             }else if (v instanceof RuntimeFuncValue && primarySuffix instanceof AspArguments){
 
                 RuntimeListValue params = (RuntimeListValue) primarySuffix.eval(curScope);
+                trace("Call function " + v.toString() + " with parameters " + params.toString());
                 v = v.evalFuncCall(params.getListValue(), this);
 
             }

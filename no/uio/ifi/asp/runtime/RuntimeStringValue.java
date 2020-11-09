@@ -132,6 +132,8 @@ public class RuntimeStringValue extends RuntimeValue {
         return new RuntimeBoolValue(!this.getBoolValue("not operand", where));
     }
 
-
-
+    @Override
+    public RuntimeValue evalLen(AspSyntax where) {
+        return new RuntimeIntValue(strValue.length());
+    }
 }

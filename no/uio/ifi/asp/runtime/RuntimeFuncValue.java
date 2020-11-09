@@ -16,9 +16,10 @@ public class RuntimeFuncValue extends RuntimeValue {
         this.name = def;
     }
 
-    public RuntimeFuncValue(AspFuncDef def, RuntimeScope defScope){
+    public RuntimeFuncValue(AspFuncDef def, RuntimeScope defScope, String name){
         this.def = def;
         this.defScope = defScope;
+        this.name = name;
     }
 
 
@@ -30,7 +31,7 @@ public class RuntimeFuncValue extends RuntimeValue {
 
     @Override
     protected String showInfo(ArrayList<RuntimeValue> inUse, boolean toPrint) {
-        return "None";
+        return name;
     }
 
     @Override
