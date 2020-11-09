@@ -34,6 +34,11 @@ public class RuntimeFloatValue extends RuntimeValue {
     }
 
     @Override
+    public String getStringValue(String what, AspSyntax where) {
+        return Double.toString(floatValue);
+    }
+
+    @Override
     public RuntimeValue evalPositive(AspSyntax where) {
         return new RuntimeFloatValue(floatValue);
     }

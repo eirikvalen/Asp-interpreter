@@ -34,6 +34,11 @@ public class RuntimeListValue extends RuntimeValue {
         return ! listValue.isEmpty();
     }
 
+    @Override
+    public String getStringValue(String what, AspSyntax where) {
+        return listValue.toString();
+    }
+
 
     @Override
     public RuntimeValue evalNot(AspSyntax where) {

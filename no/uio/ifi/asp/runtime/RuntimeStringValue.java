@@ -40,18 +40,6 @@ public class RuntimeStringValue extends RuntimeValue {
     }
 
     @Override
-    public double getFloatValue(String what, AspSyntax where){
-        try {
-           return Double.parseDouble(strValue);
-        }catch (Exception e){
-            runtimeError("cant cast string" + strValue + "to float", where);
-        }
-
-        //TODO
-        return 0.0;
-    }
-
-    @Override
     public RuntimeValue evalAdd(RuntimeValue v, AspSyntax where){
         if (v instanceof RuntimeStringValue){
             return new RuntimeStringValue(strValue + v.getStringValue("+ operand", where));

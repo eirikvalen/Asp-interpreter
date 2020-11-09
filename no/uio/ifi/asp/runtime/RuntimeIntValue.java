@@ -1,5 +1,6 @@
 package no.uio.ifi.asp.runtime;
 
+import no.uio.ifi.asp.parser.AspSmallStmt;
 import no.uio.ifi.asp.parser.AspSyntax;
 
 import java.util.ArrayList;
@@ -37,6 +38,11 @@ public class RuntimeIntValue extends RuntimeValue {
     @Override
     public double getFloatValue(String what, AspSyntax where) {
         return (double)intValue;
+    }
+
+    @Override
+    public String getStringValue(String what, AspSyntax where) {
+        return Long.toString(intValue);
     }
 
     @Override

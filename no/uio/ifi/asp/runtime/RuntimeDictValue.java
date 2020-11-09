@@ -39,6 +39,11 @@ public class RuntimeDictValue extends RuntimeValue {
         return !dictValue.isEmpty();
     }
 
+    @Override
+    public String getStringValue(String what, AspSyntax where) {
+        return showInfo();
+    }
+
 
     @Override
     public RuntimeValue evalEqual(RuntimeValue v, AspSyntax where) {

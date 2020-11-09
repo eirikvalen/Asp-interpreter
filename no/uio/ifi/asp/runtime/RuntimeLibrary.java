@@ -52,20 +52,95 @@ public class RuntimeLibrary extends RuntimeScope {
                 checkNumParams(actualParams, 1, "float", where);
 
                 RuntimeValue v = actualParams.get(0);
+
+                double doubleValue = 0.0;
+
                 if (v instanceof RuntimeStringValue){
-                    double doubleValue = v.getFloatValue("float", where);
-                    return new RuntimeFloatValue(doubleValue);
+                    try{
+                        doubleValue = Double.parseDouble(v.getStringValue("float", where));
+                    }catch (Exception e){
+                        runtimeError("String " + v.showInfo() + " is not a legal float", where);
+                    }
 
-                }else if (v instanceof RuntimeIntValue){
-                    return new RuntimeFloatValue(v.getFloatValue("float", where));
 
+                } else if (v instanceof RuntimeIntValue){
+                    doubleValue = (double) v.getIntValue("float", where);
+                }else if (v instanceof RuntimeFloatValue){
+                    doubleValue = v.getFloatValue("float", where);
+                }else{
+                    runtimeError("Type error: parameter to float is neither number nor text string", where);
                 }
-
-
-                return new RuntimeNoneValue();
+                return new RuntimeFloatValue(doubleValue);
             }
         });
 
+        //int
+        assign("int", new RuntimeFuncValue("int") {
+            @Override
+            public RuntimeValue evalFuncCall(ArrayList<RuntimeValue> actualParams, AspSyntax where) {
+                checkNumParams(actualParams, 1, "int", where);
+
+                RuntimeValue v = actualParams.get(0);
+
+                long intValue = 0;
+
+                if (v instanceof RuntimeStringValue){
+                    try{
+                        intValue = Long.parseLong(v.getStringValue("int", where));
+                    }catch (Exception e){
+                        runtimeError("String " + v.showInfo() + " is not a legal int", where);
+                    }
+
+
+                } else if (v instanceof RuntimeIntValue){
+                    intValue = v.getIntValue("int",where);
+
+                }else if (v instanceof RuntimeFloatValue){
+                    intValue = (long) v.getFloatValue("int", where);
+
+                }else{
+                    runtimeError("Type error: parameter to int is neither number nor text string", where);
+                }
+                return new RuntimeIntValue(intValue);
+            }
+        });
+
+
+        //str
+        assign("str", new RuntimeFuncValue("str"){
+            @Override
+            public RuntimeValue evalFuncCall(ArrayList<RuntimeValue> actualParams, AspSyntax where) {
+                checkNumParams(actualParams, 1, "str", where);
+
+                return new RuntimeStringValue(actualParams.get(0).toString());
+            }
+        });
+
+        //range
+        assign("range", new RuntimeFuncValue("range"){
+            @Override
+            public RuntimeValue evalFuncCall(ArrayList<RuntimeValue> actualParams, AspSyntax where) {
+                checkNumParams(actualParams, 2, "range", where);
+                long start = actualParams.get(0).getIntValue("range", where);
+                long end = actualParams.get(1).getIntValue("range", where);
+
+                ArrayList<RuntimeValue> range = new ArrayList<>();
+                for (long i = start; i<end; i++){
+                    range.add(new RuntimeIntValue(i));
+                }
+                return new RuntimeListValue(range);
+            }
+        });
+
+        //input
+        assign("input", new RuntimeFuncValue("input"){
+            @Override
+            public RuntimeValue evalFuncCall(ArrayList<RuntimeValue> actualParams, AspSyntax where) {
+                checkNumParams(actualParams, 1, "input", where);
+                System.out.print(actualParams.get(0));
+                return new RuntimeStringValue(keyboard.nextLine());
+            }
+        });
     }
 
 
