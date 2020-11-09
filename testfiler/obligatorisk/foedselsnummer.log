@@ -1,1914 +1,516 @@
-<program>
-   1: # Dette programmet leser norske fødelsnumre (11 sifre) og
-   2: # sjekker om kontrollsifrene er riktige.
-   3: 
-   4: vekter_1 = [ 3, 7, 6, 1, 8, 9, 4, 5, 2 ]
-  <stmt>
-    <small stmt list>
-      <small stmt>
-        <assignment>
-          <name>
-          </name>
-          <expr>
-            <and test>
-              <not test>
-                <comparison>
-                  <term>
-                    <factor>
-                      <primary>
-                        <atom>
-                          <list display>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                          </list display>
-                        </atom>
-                      </primary>
-                    </factor>
-                  </term>
-                </comparison>
-              </not test>
-            </and test>
-          </expr>
-        </assignment>
-      </small stmt>
-    </small stmt list>
-  </stmt>
-   5: vekter_2 = [ 5, 4, 3, 2, 7, 6, 5, 4, 3, 2 ]
-  <stmt>
-    <small stmt list>
-      <small stmt>
-        <assignment>
-          <name>
-          </name>
-          <expr>
-            <and test>
-              <not test>
-                <comparison>
-                  <term>
-                    <factor>
-                      <primary>
-                        <atom>
-                          <list display>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                            <expr>
-                              <and test>
-                                <not test>
-                                  <comparison>
-                                    <term>
-                                      <factor>
-                                        <primary>
-                                          <atom>
-                                            <integer literal>
-                                            </integer literal>
-                                          </atom>
-                                        </primary>
-                                      </factor>
-                                    </term>
-                                  </comparison>
-                                </not test>
-                              </and test>
-                            </expr>
-                          </list display>
-                        </atom>
-                      </primary>
-                    </factor>
-                  </term>
-                </comparison>
-              </not test>
-            </and test>
-          </expr>
-        </assignment>
-      </small stmt>
-    </small stmt list>
-  </stmt>
-   6: 
-   7: def sjekk_kontrollsiffer (n, vekter):
-  <stmt>
-    <compound stmt>
-      <func def>
-        <name>
-        </name>
-        <name>
-        </name>
-        <name>
-        </name>
-        <suite>
-   8:    sum = 0
-          <stmt>
-            <small stmt list>
-              <small stmt>
-                <assignment>
-                  <name>
-                  </name>
-                  <expr>
-                    <and test>
-                      <not test>
-                        <comparison>
-                          <term>
-                            <factor>
-                              <primary>
-                                <atom>
-                                  <integer literal>
-                                  </integer literal>
-                                </atom>
-                              </primary>
-                            </factor>
-                          </term>
-                        </comparison>
-                      </not test>
-                    </and test>
-                  </expr>
-                </assignment>
-              </small stmt>
-            </small stmt list>
-          </stmt>
-   9:    for i in range(0,n):
-          <stmt>
-            <compound stmt>
-              <for stmt>
-                <name>
-                </name>
-                <expr>
-                  <and test>
-                    <not test>
-                      <comparison>
-                        <term>
-                          <factor>
-                            <primary>
-                              <atom>
-                                <name>
-                                </name>
-                              </atom>
-                              <primary suffix>
-                                <arguments>
-                                  <expr>
-                                    <and test>
-                                      <not test>
-                                        <comparison>
-                                          <term>
-                                            <factor>
-                                              <primary>
-                                                <atom>
-                                                  <integer literal>
-                                                  </integer literal>
-                                                </atom>
-                                              </primary>
-                                            </factor>
-                                          </term>
-                                        </comparison>
-                                      </not test>
-                                    </and test>
-                                  </expr>
-                                  <expr>
-                                    <and test>
-                                      <not test>
-                                        <comparison>
-                                          <term>
-                                            <factor>
-                                              <primary>
-                                                <atom>
-                                                  <name>
-                                                  </name>
-                                                </atom>
-                                              </primary>
-                                            </factor>
-                                          </term>
-                                        </comparison>
-                                      </not test>
-                                    </and test>
-                                  </expr>
-                                </arguments>
-                              </primary suffix>
-                            </primary>
-                          </factor>
-                        </term>
-                      </comparison>
-                    </not test>
-                  </and test>
-                </expr>
-                <suite>
-  10:       sum = sum + vekter[i]*sifre[i]
-                  <stmt>
-                    <small stmt list>
-                      <small stmt>
-                        <assignment>
-                          <name>
-                          </name>
-                          <expr>
-                            <and test>
-                              <not test>
-                                <comparison>
-                                  <term>
-                                    <factor>
-                                      <primary>
-                                        <atom>
-                                          <name>
-                                          </name>
-                                        </atom>
-                                      </primary>
-                                    </factor>
-                                    <term opr>
-                                    </term opr>
-                                    <factor>
-                                      <primary>
-                                        <atom>
-                                          <name>
-                                          </name>
-                                        </atom>
-                                        <primary suffix>
-                                          <subscription>
-                                            <expr>
-                                              <and test>
-                                                <not test>
-                                                  <comparison>
-                                                    <term>
-                                                      <factor>
-                                                        <primary>
-                                                          <atom>
-                                                            <name>
-                                                            </name>
-                                                          </atom>
-                                                        </primary>
-                                                      </factor>
-                                                    </term>
-                                                  </comparison>
-                                                </not test>
-                                              </and test>
-                                            </expr>
-                                          </subscription>
-                                        </primary suffix>
-                                      </primary>
-                                      <factor opr>
-                                      </factor opr>
-                                      <primary>
-                                        <atom>
-                                          <name>
-                                          </name>
-                                        </atom>
-                                        <primary suffix>
-                                          <subscription>
-                                            <expr>
-                                              <and test>
-                                                <not test>
-                                                  <comparison>
-                                                    <term>
-                                                      <factor>
-                                                        <primary>
-                                                          <atom>
-                                                            <name>
-                                                            </name>
-                                                          </atom>
-                                                        </primary>
-                                                      </factor>
-                                                    </term>
-                                                  </comparison>
-                                                </not test>
-                                              </and test>
-                                            </expr>
-                                          </subscription>
-                                        </primary suffix>
-                                      </primary>
-                                    </factor>
-                                  </term>
-                                </comparison>
-                              </not test>
-                            </and test>
-                          </expr>
-                        </assignment>
-                      </small stmt>
-                    </small stmt list>
-                  </stmt>
-  11:    return (sum+sifre[n])%11 == 0
-                </suite>
-              </for stmt>
-            </compound stmt>
-          </stmt>
-          <stmt>
-            <small stmt list>
-              <small stmt>
-                <return stmt>
-                  <expr>
-                    <and test>
-                      <not test>
-                        <comparison>
-                          <term>
-                            <factor>
-                              <primary>
-                                <atom>
-                                  <inner expr>
-                                    <expr>
-                                      <and test>
-                                        <not test>
-                                          <comparison>
-                                            <term>
-                                              <factor>
-                                                <primary>
-                                                  <atom>
-                                                    <name>
-                                                    </name>
-                                                  </atom>
-                                                </primary>
-                                              </factor>
-                                              <term opr>
-                                              </term opr>
-                                              <factor>
-                                                <primary>
-                                                  <atom>
-                                                    <name>
-                                                    </name>
-                                                  </atom>
-                                                  <primary suffix>
-                                                    <subscription>
-                                                      <expr>
-                                                        <and test>
-                                                          <not test>
-                                                            <comparison>
-                                                              <term>
-                                                                <factor>
-                                                                  <primary>
-                                                                    <atom>
-                                                                      <name>
-                                                                      </name>
-                                                                    </atom>
-                                                                  </primary>
-                                                                </factor>
-                                                              </term>
-                                                            </comparison>
-                                                          </not test>
-                                                        </and test>
-                                                      </expr>
-                                                    </subscription>
-                                                  </primary suffix>
-                                                </primary>
-                                              </factor>
-                                            </term>
-                                          </comparison>
-                                        </not test>
-                                      </and test>
-                                    </expr>
-                                  </inner expr>
-                                </atom>
-                              </primary>
-                              <factor opr>
-                              </factor opr>
-                              <primary>
-                                <atom>
-                                  <integer literal>
-                                  </integer literal>
-                                </atom>
-                              </primary>
-                            </factor>
-                          </term>
-                          <comp opr>
-                          </comp opr>
-                          <term>
-                            <factor>
-                              <primary>
-                                <atom>
-                                  <integer literal>
-                                  </integer literal>
-                                </atom>
-                              </primary>
-                            </factor>
-                          </term>
-                        </comparison>
-                      </not test>
-                    </and test>
-                  </expr>
-                </return stmt>
-              </small stmt>
-            </small stmt list>
-          </stmt>
-  12: 
-  13: def kun_sifre (t):
-        </suite>
-      </func def>
-    </compound stmt>
-  </stmt>
-  <stmt>
-    <compound stmt>
-      <func def>
-        <name>
-        </name>
-        <name>
-        </name>
-        <suite>
-  14:    res = ""
-          <stmt>
-            <small stmt list>
-              <small stmt>
-                <assignment>
-                  <name>
-                  </name>
-                  <expr>
-                    <and test>
-                      <not test>
-                        <comparison>
-                          <term>
-                            <factor>
-                              <primary>
-                                <atom>
-                                  <string literal>
-                                  </string literal>
-                                </atom>
-                              </primary>
-                            </factor>
-                          </term>
-                        </comparison>
-                      </not test>
-                    </and test>
-                  </expr>
-                </assignment>
-              </small stmt>
-            </small stmt list>
-          </stmt>
-  15:    for i in range(0, len(t)):
-          <stmt>
-            <compound stmt>
-              <for stmt>
-                <name>
-                </name>
-                <expr>
-                  <and test>
-                    <not test>
-                      <comparison>
-                        <term>
-                          <factor>
-                            <primary>
-                              <atom>
-                                <name>
-                                </name>
-                              </atom>
-                              <primary suffix>
-                                <arguments>
-                                  <expr>
-                                    <and test>
-                                      <not test>
-                                        <comparison>
-                                          <term>
-                                            <factor>
-                                              <primary>
-                                                <atom>
-                                                  <integer literal>
-                                                  </integer literal>
-                                                </atom>
-                                              </primary>
-                                            </factor>
-                                          </term>
-                                        </comparison>
-                                      </not test>
-                                    </and test>
-                                  </expr>
-                                  <expr>
-                                    <and test>
-                                      <not test>
-                                        <comparison>
-                                          <term>
-                                            <factor>
-                                              <primary>
-                                                <atom>
-                                                  <name>
-                                                  </name>
-                                                </atom>
-                                                <primary suffix>
-                                                  <arguments>
-                                                    <expr>
-                                                      <and test>
-                                                        <not test>
-                                                          <comparison>
-                                                            <term>
-                                                              <factor>
-                                                                <primary>
-                                                                  <atom>
-                                                                    <name>
-                                                                    </name>
-                                                                  </atom>
-                                                                </primary>
-                                                              </factor>
-                                                            </term>
-                                                          </comparison>
-                                                        </not test>
-                                                      </and test>
-                                                    </expr>
-                                                  </arguments>
-                                                </primary suffix>
-                                              </primary>
-                                            </factor>
-                                          </term>
-                                        </comparison>
-                                      </not test>
-                                    </and test>
-                                  </expr>
-                                </arguments>
-                              </primary suffix>
-                            </primary>
-                          </factor>
-                        </term>
-                      </comparison>
-                    </not test>
-                  </and test>
-                </expr>
-                <suite>
-  16:       c = t[i]
-                  <stmt>
-                    <small stmt list>
-                      <small stmt>
-                        <assignment>
-                          <name>
-                          </name>
-                          <expr>
-                            <and test>
-                              <not test>
-                                <comparison>
-                                  <term>
-                                    <factor>
-                                      <primary>
-                                        <atom>
-                                          <name>
-                                          </name>
-                                        </atom>
-                                        <primary suffix>
-                                          <subscription>
-                                            <expr>
-                                              <and test>
-                                                <not test>
-                                                  <comparison>
-                                                    <term>
-                                                      <factor>
-                                                        <primary>
-                                                          <atom>
-                                                            <name>
-                                                            </name>
-                                                          </atom>
-                                                        </primary>
-                                                      </factor>
-                                                    </term>
-                                                  </comparison>
-                                                </not test>
-                                              </and test>
-                                            </expr>
-                                          </subscription>
-                                        </primary suffix>
-                                      </primary>
-                                    </factor>
-                                  </term>
-                                </comparison>
-                              </not test>
-                            </and test>
-                          </expr>
-                        </assignment>
-                      </small stmt>
-                    </small stmt list>
-                  </stmt>
-  17:       if ('0' <= c and c <= '9'):
-                  <stmt>
-                    <compound stmt>
-                      <if stmt>
-                        <expr>
-                          <and test>
-                            <not test>
-                              <comparison>
-                                <term>
-                                  <factor>
-                                    <primary>
-                                      <atom>
-                                        <inner expr>
-                                          <expr>
-                                            <and test>
-                                              <not test>
-                                                <comparison>
-                                                  <term>
-                                                    <factor>
-                                                      <primary>
-                                                        <atom>
-                                                          <string literal>
-                                                          </string literal>
-                                                        </atom>
-                                                      </primary>
-                                                    </factor>
-                                                  </term>
-                                                  <comp opr>
-                                                  </comp opr>
-                                                  <term>
-                                                    <factor>
-                                                      <primary>
-                                                        <atom>
-                                                          <name>
-                                                          </name>
-                                                        </atom>
-                                                      </primary>
-                                                    </factor>
-                                                  </term>
-                                                </comparison>
-                                              </not test>
-                                              <not test>
-                                                <comparison>
-                                                  <term>
-                                                    <factor>
-                                                      <primary>
-                                                        <atom>
-                                                          <name>
-                                                          </name>
-                                                        </atom>
-                                                      </primary>
-                                                    </factor>
-                                                  </term>
-                                                  <comp opr>
-                                                  </comp opr>
-                                                  <term>
-                                                    <factor>
-                                                      <primary>
-                                                        <atom>
-                                                          <string literal>
-                                                          </string literal>
-                                                        </atom>
-                                                      </primary>
-                                                    </factor>
-                                                  </term>
-                                                </comparison>
-                                              </not test>
-                                            </and test>
-                                          </expr>
-                                        </inner expr>
-                                      </atom>
-                                    </primary>
-                                  </factor>
-                                </term>
-                              </comparison>
-                            </not test>
-                          </and test>
-                        </expr>
-                        <suite>
-  18:          res = res + c  # Ta vare på desimale sifre
-                          <stmt>
-                            <small stmt list>
-                              <small stmt>
-                                <assignment>
-                                  <name>
-                                  </name>
-                                  <expr>
-                                    <and test>
-                                      <not test>
-                                        <comparison>
-                                          <term>
-                                            <factor>
-                                              <primary>
-                                                <atom>
-                                                  <name>
-                                                  </name>
-                                                </atom>
-                                              </primary>
-                                            </factor>
-                                            <term opr>
-                                            </term opr>
-                                            <factor>
-                                              <primary>
-                                                <atom>
-                                                  <name>
-                                                  </name>
-                                                </atom>
-                                              </primary>
-                                            </factor>
-                                          </term>
-                                        </comparison>
-                                      </not test>
-                                    </and test>
-                                  </expr>
-                                </assignment>
-                              </small stmt>
-                            </small stmt list>
-                          </stmt>
-  19:       else:
-                        </suite>
-                        <suite>
-  20:          pass  # Ignorer alle andre tegn
-                          <stmt>
-                            <small stmt list>
-                              <small stmt>
-                                <pass stmt>
-                                </pass stmt>
-                              </small stmt>
-                            </small stmt list>
-                          </stmt>
-  21:    return res
-                        </suite>
-                      </if stmt>
-                    </compound stmt>
-                  </stmt>
-                </suite>
-              </for stmt>
-            </compound stmt>
-          </stmt>
-          <stmt>
-            <small stmt list>
-              <small stmt>
-                <return stmt>
-                  <expr>
-                    <and test>
-                      <not test>
-                        <comparison>
-                          <term>
-                            <factor>
-                              <primary>
-                                <atom>
-                                  <name>
-                                  </name>
-                                </atom>
-                              </primary>
-                            </factor>
-                          </term>
-                        </comparison>
-                      </not test>
-                    </and test>
-                  </expr>
-                </return stmt>
-              </small stmt>
-            </small stmt list>
-          </stmt>
-  22: 
-  23: while True:
-        </suite>
-      </func def>
-    </compound stmt>
-  </stmt>
-  <stmt>
-    <compound stmt>
-      <while stmt>
-        <expr>
-          <and test>
-            <not test>
-              <comparison>
-                <term>
-                  <factor>
-                    <primary>
-                      <atom>
-                        <boolean literal>
-                        </boolean literal>
-                      </atom>
-                    </primary>
-                  </factor>
-                </term>
-              </comparison>
-            </not test>
-          </and test>
-        </expr>
-        <suite>
-  24:    fnr = kun_sifre(input("Fødselsnummer: "))
-          <stmt>
-            <small stmt list>
-              <small stmt>
-                <assignment>
-                  <name>
-                  </name>
-                  <expr>
-                    <and test>
-                      <not test>
-                        <comparison>
-                          <term>
-                            <factor>
-                              <primary>
-                                <atom>
-                                  <name>
-                                  </name>
-                                </atom>
-                                <primary suffix>
-                                  <arguments>
-                                    <expr>
-                                      <and test>
-                                        <not test>
-                                          <comparison>
-                                            <term>
-                                              <factor>
-                                                <primary>
-                                                  <atom>
-                                                    <name>
-                                                    </name>
-                                                  </atom>
-                                                  <primary suffix>
-                                                    <arguments>
-                                                      <expr>
-                                                        <and test>
-                                                          <not test>
-                                                            <comparison>
-                                                              <term>
-                                                                <factor>
-                                                                  <primary>
-                                                                    <atom>
-                                                                      <string literal>
-                                                                      </string literal>
-                                                                    </atom>
-                                                                  </primary>
-                                                                </factor>
-                                                              </term>
-                                                            </comparison>
-                                                          </not test>
-                                                        </and test>
-                                                      </expr>
-                                                    </arguments>
-                                                  </primary suffix>
-                                                </primary>
-                                              </factor>
-                                            </term>
-                                          </comparison>
-                                        </not test>
-                                      </and test>
-                                    </expr>
-                                  </arguments>
-                                </primary suffix>
-                              </primary>
-                            </factor>
-                          </term>
-                        </comparison>
-                      </not test>
-                    </and test>
-                  </expr>
-                </assignment>
-              </small stmt>
-            </small stmt list>
-          </stmt>
-  25:    if fnr == "": exit(0)
-          <stmt>
-            <compound stmt>
-              <if stmt>
-                <expr>
-                  <and test>
-                    <not test>
-                      <comparison>
-                        <term>
-                          <factor>
-                            <primary>
-                              <atom>
-                                <name>
-                                </name>
-                              </atom>
-                            </primary>
-                          </factor>
-                        </term>
-                        <comp opr>
-                        </comp opr>
-                        <term>
-                          <factor>
-                            <primary>
-                              <atom>
-                                <string literal>
-                                </string literal>
-                              </atom>
-                            </primary>
-                          </factor>
-                        </term>
-                      </comparison>
-                    </not test>
-                  </and test>
-                </expr>
-                <suite>
-                  <small stmt list>
-                    <small stmt>
-                      <expr stmt>
-                        <expr>
-                          <and test>
-                            <not test>
-                              <comparison>
-                                <term>
-                                  <factor>
-                                    <primary>
-                                      <atom>
-                                        <name>
-                                        </name>
-                                      </atom>
-                                      <primary suffix>
-                                        <arguments>
-                                          <expr>
-                                            <and test>
-                                              <not test>
-                                                <comparison>
-                                                  <term>
-                                                    <factor>
-                                                      <primary>
-                                                        <atom>
-                                                          <integer literal>
-                                                          </integer literal>
-                                                        </atom>
-                                                      </primary>
-                                                    </factor>
-                                                  </term>
-                                                </comparison>
-                                              </not test>
-                                            </and test>
-                                          </expr>
-                                        </arguments>
-                                      </primary suffix>
-                                    </primary>
-                                  </factor>
-                                </term>
-                              </comparison>
-                            </not test>
-                          </and test>
-                        </expr>
-                      </expr stmt>
-                    </small stmt>
-                  </small stmt list>
-                </suite>
-  26: 
-  27:    if len(fnr) != 11:
-              </if stmt>
-            </compound stmt>
-          </stmt>
-          <stmt>
-            <compound stmt>
-              <if stmt>
-                <expr>
-                  <and test>
-                    <not test>
-                      <comparison>
-                        <term>
-                          <factor>
-                            <primary>
-                              <atom>
-                                <name>
-                                </name>
-                              </atom>
-                              <primary suffix>
-                                <arguments>
-                                  <expr>
-                                    <and test>
-                                      <not test>
-                                        <comparison>
-                                          <term>
-                                            <factor>
-                                              <primary>
-                                                <atom>
-                                                  <name>
-                                                  </name>
-                                                </atom>
-                                              </primary>
-                                            </factor>
-                                          </term>
-                                        </comparison>
-                                      </not test>
-                                    </and test>
-                                  </expr>
-                                </arguments>
-                              </primary suffix>
-                            </primary>
-                          </factor>
-                        </term>
-                        <comp opr>
-                        </comp opr>
-                        <term>
-                          <factor>
-                            <primary>
-                              <atom>
-                                <integer literal>
-                                </integer literal>
-                              </atom>
-                            </primary>
-                          </factor>
-                        </term>
-                      </comparison>
-                    </not test>
-                  </and test>
-                </expr>
-                <suite>
-  28:       print(fnr, "har ikke 11 sifre!")
-                  <stmt>
-                    <small stmt list>
-                      <small stmt>
-                        <expr stmt>
-                          <expr>
-                            <and test>
-                              <not test>
-                                <comparison>
-                                  <term>
-                                    <factor>
-                                      <primary>
-                                        <atom>
-                                          <name>
-                                          </name>
-                                        </atom>
-                                        <primary suffix>
-                                          <arguments>
-                                            <expr>
-                                              <and test>
-                                                <not test>
-                                                  <comparison>
-                                                    <term>
-                                                      <factor>
-                                                        <primary>
-                                                          <atom>
-                                                            <name>
-                                                            </name>
-                                                          </atom>
-                                                        </primary>
-                                                      </factor>
-                                                    </term>
-                                                  </comparison>
-                                                </not test>
-                                              </and test>
-                                            </expr>
-                                            <expr>
-                                              <and test>
-                                                <not test>
-                                                  <comparison>
-                                                    <term>
-                                                      <factor>
-                                                        <primary>
-                                                          <atom>
-                                                            <string literal>
-                                                            </string literal>
-                                                          </atom>
-                                                        </primary>
-                                                      </factor>
-                                                    </term>
-                                                  </comparison>
-                                                </not test>
-                                              </and test>
-                                            </expr>
-                                          </arguments>
-                                        </primary suffix>
-                                      </primary>
-                                    </factor>
-                                  </term>
-                                </comparison>
-                              </not test>
-                            </and test>
-                          </expr>
-                        </expr stmt>
-                      </small stmt>
-                    </small stmt list>
-                  </stmt>
-  29:    else:
-                </suite>
-                <suite>
-  30:       sifre = [0] * 11;
-                  <stmt>
-                    <small stmt list>
-                      <small stmt>
-                        <assignment>
-                          <name>
-                          </name>
-                          <expr>
-                            <and test>
-                              <not test>
-                                <comparison>
-                                  <term>
-                                    <factor>
-                                      <primary>
-                                        <atom>
-                                          <list display>
-                                            <expr>
-                                              <and test>
-                                                <not test>
-                                                  <comparison>
-                                                    <term>
-                                                      <factor>
-                                                        <primary>
-                                                          <atom>
-                                                            <integer literal>
-                                                            </integer literal>
-                                                          </atom>
-                                                        </primary>
-                                                      </factor>
-                                                    </term>
-                                                  </comparison>
-                                                </not test>
-                                              </and test>
-                                            </expr>
-                                          </list display>
-                                        </atom>
-                                      </primary>
-                                      <factor opr>
-                                      </factor opr>
-                                      <primary>
-                                        <atom>
-                                          <integer literal>
-                                          </integer literal>
-                                        </atom>
-                                      </primary>
-                                    </factor>
-                                  </term>
-                                </comparison>
-                              </not test>
-                            </and test>
-                          </expr>
-                        </assignment>
-                      </small stmt>
-                    </small stmt list>
-                  </stmt>
-  31:       for i in range(0, 11): 
-                  <stmt>
-                    <compound stmt>
-                      <for stmt>
-                        <name>
-                        </name>
-                        <expr>
-                          <and test>
-                            <not test>
-                              <comparison>
-                                <term>
-                                  <factor>
-                                    <primary>
-                                      <atom>
-                                        <name>
-                                        </name>
-                                      </atom>
-                                      <primary suffix>
-                                        <arguments>
-                                          <expr>
-                                            <and test>
-                                              <not test>
-                                                <comparison>
-                                                  <term>
-                                                    <factor>
-                                                      <primary>
-                                                        <atom>
-                                                          <integer literal>
-                                                          </integer literal>
-                                                        </atom>
-                                                      </primary>
-                                                    </factor>
-                                                  </term>
-                                                </comparison>
-                                              </not test>
-                                            </and test>
-                                          </expr>
-                                          <expr>
-                                            <and test>
-                                              <not test>
-                                                <comparison>
-                                                  <term>
-                                                    <factor>
-                                                      <primary>
-                                                        <atom>
-                                                          <integer literal>
-                                                          </integer literal>
-                                                        </atom>
-                                                      </primary>
-                                                    </factor>
-                                                  </term>
-                                                </comparison>
-                                              </not test>
-                                            </and test>
-                                          </expr>
-                                        </arguments>
-                                      </primary suffix>
-                                    </primary>
-                                  </factor>
-                                </term>
-                              </comparison>
-                            </not test>
-                          </and test>
-                        </expr>
-                        <suite>
-  32:          sifre[i] = int(fnr[i])
-                          <stmt>
-                            <small stmt list>
-                              <small stmt>
-                                <assignment>
-                                  <name>
-                                  </name>
-                                  <subscription>
-                                    <expr>
-                                      <and test>
-                                        <not test>
-                                          <comparison>
-                                            <term>
-                                              <factor>
-                                                <primary>
-                                                  <atom>
-                                                    <name>
-                                                    </name>
-                                                  </atom>
-                                                </primary>
-                                              </factor>
-                                            </term>
-                                          </comparison>
-                                        </not test>
-                                      </and test>
-                                    </expr>
-                                  </subscription>
-                                  <expr>
-                                    <and test>
-                                      <not test>
-                                        <comparison>
-                                          <term>
-                                            <factor>
-                                              <primary>
-                                                <atom>
-                                                  <name>
-                                                  </name>
-                                                </atom>
-                                                <primary suffix>
-                                                  <arguments>
-                                                    <expr>
-                                                      <and test>
-                                                        <not test>
-                                                          <comparison>
-                                                            <term>
-                                                              <factor>
-                                                                <primary>
-                                                                  <atom>
-                                                                    <name>
-                                                                    </name>
-                                                                  </atom>
-                                                                  <primary suffix>
-                                                                    <subscription>
-                                                                      <expr>
-                                                                        <and test>
-                                                                          <not test>
-                                                                            <comparison>
-                                                                              <term>
-                                                                                <factor>
-                                                                                  <primary>
-                                                                                    <atom>
-                                                                                      <name>
-                                                                                      </name>
-                                                                                    </atom>
-                                                                                  </primary>
-                                                                                </factor>
-                                                                              </term>
-                                                                            </comparison>
-                                                                          </not test>
-                                                                        </and test>
-                                                                      </expr>
-                                                                    </subscription>
-                                                                  </primary suffix>
-                                                                </primary>
-                                                              </factor>
-                                                            </term>
-                                                          </comparison>
-                                                        </not test>
-                                                      </and test>
-                                                    </expr>
-                                                  </arguments>
-                                                </primary suffix>
-                                              </primary>
-                                            </factor>
-                                          </term>
-                                        </comparison>
-                                      </not test>
-                                    </and test>
-                                  </expr>
-                                </assignment>
-                              </small stmt>
-                            </small stmt list>
-                          </stmt>
-  33:       if sjekk_kontrollsiffer(9,vekter_1) and sjekk_kontrollsiffer(10,vekter_2):
-                        </suite>
-                      </for stmt>
-                    </compound stmt>
-                  </stmt>
-                  <stmt>
-                    <compound stmt>
-                      <if stmt>
-                        <expr>
-                          <and test>
-                            <not test>
-                              <comparison>
-                                <term>
-                                  <factor>
-                                    <primary>
-                                      <atom>
-                                        <name>
-                                        </name>
-                                      </atom>
-                                      <primary suffix>
-                                        <arguments>
-                                          <expr>
-                                            <and test>
-                                              <not test>
-                                                <comparison>
-                                                  <term>
-                                                    <factor>
-                                                      <primary>
-                                                        <atom>
-                                                          <integer literal>
-                                                          </integer literal>
-                                                        </atom>
-                                                      </primary>
-                                                    </factor>
-                                                  </term>
-                                                </comparison>
-                                              </not test>
-                                            </and test>
-                                          </expr>
-                                          <expr>
-                                            <and test>
-                                              <not test>
-                                                <comparison>
-                                                  <term>
-                                                    <factor>
-                                                      <primary>
-                                                        <atom>
-                                                          <name>
-                                                          </name>
-                                                        </atom>
-                                                      </primary>
-                                                    </factor>
-                                                  </term>
-                                                </comparison>
-                                              </not test>
-                                            </and test>
-                                          </expr>
-                                        </arguments>
-                                      </primary suffix>
-                                    </primary>
-                                  </factor>
-                                </term>
-                              </comparison>
-                            </not test>
-                            <not test>
-                              <comparison>
-                                <term>
-                                  <factor>
-                                    <primary>
-                                      <atom>
-                                        <name>
-                                        </name>
-                                      </atom>
-                                      <primary suffix>
-                                        <arguments>
-                                          <expr>
-                                            <and test>
-                                              <not test>
-                                                <comparison>
-                                                  <term>
-                                                    <factor>
-                                                      <primary>
-                                                        <atom>
-                                                          <integer literal>
-                                                          </integer literal>
-                                                        </atom>
-                                                      </primary>
-                                                    </factor>
-                                                  </term>
-                                                </comparison>
-                                              </not test>
-                                            </and test>
-                                          </expr>
-                                          <expr>
-                                            <and test>
-                                              <not test>
-                                                <comparison>
-                                                  <term>
-                                                    <factor>
-                                                      <primary>
-                                                        <atom>
-                                                          <name>
-                                                          </name>
-                                                        </atom>
-                                                      </primary>
-                                                    </factor>
-                                                  </term>
-                                                </comparison>
-                                              </not test>
-                                            </and test>
-                                          </expr>
-                                        </arguments>
-                                      </primary suffix>
-                                    </primary>
-                                  </factor>
-                                </term>
-                              </comparison>
-                            </not test>
-                          </and test>
-                        </expr>
-                        <suite>
-  34:          print("Fødselsnummer", fnr, "er OK.")
-                          <stmt>
-                            <small stmt list>
-                              <small stmt>
-                                <expr stmt>
-                                  <expr>
-                                    <and test>
-                                      <not test>
-                                        <comparison>
-                                          <term>
-                                            <factor>
-                                              <primary>
-                                                <atom>
-                                                  <name>
-                                                  </name>
-                                                </atom>
-                                                <primary suffix>
-                                                  <arguments>
-                                                    <expr>
-                                                      <and test>
-                                                        <not test>
-                                                          <comparison>
-                                                            <term>
-                                                              <factor>
-                                                                <primary>
-                                                                  <atom>
-                                                                    <string literal>
-                                                                    </string literal>
-                                                                  </atom>
-                                                                </primary>
-                                                              </factor>
-                                                            </term>
-                                                          </comparison>
-                                                        </not test>
-                                                      </and test>
-                                                    </expr>
-                                                    <expr>
-                                                      <and test>
-                                                        <not test>
-                                                          <comparison>
-                                                            <term>
-                                                              <factor>
-                                                                <primary>
-                                                                  <atom>
-                                                                    <name>
-                                                                    </name>
-                                                                  </atom>
-                                                                </primary>
-                                                              </factor>
-                                                            </term>
-                                                          </comparison>
-                                                        </not test>
-                                                      </and test>
-                                                    </expr>
-                                                    <expr>
-                                                      <and test>
-                                                        <not test>
-                                                          <comparison>
-                                                            <term>
-                                                              <factor>
-                                                                <primary>
-                                                                  <atom>
-                                                                    <string literal>
-                                                                    </string literal>
-                                                                  </atom>
-                                                                </primary>
-                                                              </factor>
-                                                            </term>
-                                                          </comparison>
-                                                        </not test>
-                                                      </and test>
-                                                    </expr>
-                                                  </arguments>
-                                                </primary suffix>
-                                              </primary>
-                                            </factor>
-                                          </term>
-                                        </comparison>
-                                      </not test>
-                                    </and test>
-                                  </expr>
-                                </expr stmt>
-                              </small stmt>
-                            </small stmt list>
-                          </stmt>
-  35:       else:
-                        </suite>
-                        <suite>
-  36:          print("Fødselsnummer", fnr, "har feil i kontrollsiffer.")
-                          <stmt>
-                            <small stmt list>
-                              <small stmt>
-                                <expr stmt>
-                                  <expr>
-                                    <and test>
-                                      <not test>
-                                        <comparison>
-                                          <term>
-                                            <factor>
-                                              <primary>
-                                                <atom>
-                                                  <name>
-                                                  </name>
-                                                </atom>
-                                                <primary suffix>
-                                                  <arguments>
-                                                    <expr>
-                                                      <and test>
-                                                        <not test>
-                                                          <comparison>
-                                                            <term>
-                                                              <factor>
-                                                                <primary>
-                                                                  <atom>
-                                                                    <string literal>
-                                                                    </string literal>
-                                                                  </atom>
-                                                                </primary>
-                                                              </factor>
-                                                            </term>
-                                                          </comparison>
-                                                        </not test>
-                                                      </and test>
-                                                    </expr>
-                                                    <expr>
-                                                      <and test>
-                                                        <not test>
-                                                          <comparison>
-                                                            <term>
-                                                              <factor>
-                                                                <primary>
-                                                                  <atom>
-                                                                    <name>
-                                                                    </name>
-                                                                  </atom>
-                                                                </primary>
-                                                              </factor>
-                                                            </term>
-                                                          </comparison>
-                                                        </not test>
-                                                      </and test>
-                                                    </expr>
-                                                    <expr>
-                                                      <and test>
-                                                        <not test>
-                                                          <comparison>
-                                                            <term>
-                                                              <factor>
-                                                                <primary>
-                                                                  <atom>
-                                                                    <string literal>
-                                                                    </string literal>
-                                                                  </atom>
-                                                                </primary>
-                                                              </factor>
-                                                            </term>
-                                                          </comparison>
-                                                        </not test>
-                                                      </and test>
-                                                    </expr>
-                                                  </arguments>
-                                                </primary suffix>
-                                              </primary>
-                                            </factor>
-                                          </term>
-                                        </comparison>
-                                      </not test>
-                                    </and test>
-                                  </expr>
-                                </expr stmt>
-                              </small stmt>
-                            </small stmt list>
-                          </stmt>
-                        </suite>
-                      </if stmt>
-                    </compound stmt>
-                  </stmt>
-                </suite>
-              </if stmt>
-            </compound stmt>
-          </stmt>
-        </suite>
-      </while stmt>
-    </compound stmt>
-  </stmt>
-</program>
-
-vekter_1 = [3, 7, 6, 1, 8, 9, 4, 5, 2]
-vekter_2 = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2]
-def sjekk_kontrollsiffer(n, vekter):
-    sum = 0
-    for i in range(0, n):
-        sum = sum + vekter[i] * sifre[i]
-    return (sum + sifre[n]) % 11 == 0
-
-def kun_sifre(t):
-    res = ""
-    for i in range(0, len(t)):
-        c = t[i]
-        if ("0" <= c and c <= "9"): 
-            res = res + c
-        else: 
-            pass
-    return res
-
-while True: 
-    fnr = kun_sifre(input("Fødselsnummer: "))
-    if fnr == "": exit(0)
-    if len(fnr) != 11: 
-        print(fnr, "har ikke 11 sifre!")
-    else: 
-        sifre = [0] * 11
-        for i in range(0, 11):
-            sifre[i] = int(fnr[i])
-        if sjekk_kontrollsiffer(9, vekter_1) and sjekk_kontrollsiffer(10, vekter_2): 
-            print("Fødselsnummer", fnr, "er OK.")
-        else: 
-            print("Fødselsnummer", fnr, "har feil i kontrollsiffer.")
+Trace line 4: vekter_1 = [3, 7, 6, 1, 8, 9, 4, 5, 2]
+Trace line 5: vekter_2 = [5, 4, 3, 2, 7, 6, 5, 4, 3, 2]
+Trace line 7: def sjekk_kontrollsiffer
+Trace line 13: def kun_sifre
+Trace line 23: while True: ...
+Trace line 24: Call function input with parameters ["Fødselsnummer: "]
+Trace line 24: Call function kun_sifre with parameters ["12345678910"]
+Trace line 14: res = ""
+Trace line 15: Call function len with parameters ["12345678910"]
+Trace line 15: Call function range with parameters [0, 11]
+Trace line 15: for #1: i = 0
+Trace line 16: c = "1"
+Trace line 17: if True alt #1
+Trace line 18: res = "1"
+Trace line 15: for #2: i = 1
+Trace line 16: c = "2"
+Trace line 17: if True alt #1
+Trace line 18: res = "12"
+Trace line 15: for #3: i = 2
+Trace line 16: c = "3"
+Trace line 17: if True alt #1
+Trace line 18: res = "123"
+Trace line 15: for #4: i = 3
+Trace line 16: c = "4"
+Trace line 17: if True alt #1
+Trace line 18: res = "1234"
+Trace line 15: for #5: i = 4
+Trace line 16: c = "5"
+Trace line 17: if True alt #1
+Trace line 18: res = "12345"
+Trace line 15: for #6: i = 5
+Trace line 16: c = "6"
+Trace line 17: if True alt #1
+Trace line 18: res = "123456"
+Trace line 15: for #7: i = 6
+Trace line 16: c = "7"
+Trace line 17: if True alt #1
+Trace line 18: res = "1234567"
+Trace line 15: for #8: i = 7
+Trace line 16: c = "8"
+Trace line 17: if True alt #1
+Trace line 18: res = "12345678"
+Trace line 15: for #9: i = 8
+Trace line 16: c = "9"
+Trace line 17: if True alt #1
+Trace line 18: res = "123456789"
+Trace line 15: for #10: i = 9
+Trace line 16: c = "1"
+Trace line 17: if True alt #1
+Trace line 18: res = "1234567891"
+Trace line 15: for #11: i = 10
+Trace line 16: c = "0"
+Trace line 17: if True alt #1
+Trace line 18: res = "12345678910"
+Trace line 21: return "12345678910"
+Trace line 24: fnr = "12345678910"
+Trace line 27: Call function len with parameters ["12345678910"]
+Trace line 27: Call function len with parameters ["12345678910"]
+Trace line 27: else:
+Trace line 30: sifre = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Trace line 31: Call function range with parameters [0, 11]
+Trace line 31: for #1: i = 0
+Trace line 32: Call function int with parameters ["1"]
+Trace line 32: sifre[0] = 1
+Trace line 31: for #2: i = 1
+Trace line 32: Call function int with parameters ["2"]
+Trace line 32: sifre[1] = 2
+Trace line 31: for #3: i = 2
+Trace line 32: Call function int with parameters ["3"]
+Trace line 32: sifre[2] = 3
+Trace line 31: for #4: i = 3
+Trace line 32: Call function int with parameters ["4"]
+Trace line 32: sifre[3] = 4
+Trace line 31: for #5: i = 4
+Trace line 32: Call function int with parameters ["5"]
+Trace line 32: sifre[4] = 5
+Trace line 31: for #6: i = 5
+Trace line 32: Call function int with parameters ["6"]
+Trace line 32: sifre[5] = 6
+Trace line 31: for #7: i = 6
+Trace line 32: Call function int with parameters ["7"]
+Trace line 32: sifre[6] = 7
+Trace line 31: for #8: i = 7
+Trace line 32: Call function int with parameters ["8"]
+Trace line 32: sifre[7] = 8
+Trace line 31: for #9: i = 8
+Trace line 32: Call function int with parameters ["9"]
+Trace line 32: sifre[8] = 9
+Trace line 31: for #10: i = 9
+Trace line 32: Call function int with parameters ["1"]
+Trace line 32: sifre[9] = 1
+Trace line 31: for #11: i = 10
+Trace line 32: Call function int with parameters ["0"]
+Trace line 32: sifre[10] = 0
+Trace line 33: Call function sjekk_kontrollsiffer with parameters [9, [3, 7, 6, 1, 8, 9, 4, 5, 2]]
+Trace line 8: sum = 0
+Trace line 9: Call function range with parameters [0, 9]
+Trace line 9: for #1: i = 0
+Trace line 10: sum = 3
+Trace line 9: for #2: i = 1
+Trace line 10: sum = 17
+Trace line 9: for #3: i = 2
+Trace line 10: sum = 35
+Trace line 9: for #4: i = 3
+Trace line 10: sum = 39
+Trace line 9: for #5: i = 4
+Trace line 10: sum = 79
+Trace line 9: for #6: i = 5
+Trace line 10: sum = 133
+Trace line 9: for #7: i = 6
+Trace line 10: sum = 161
+Trace line 9: for #8: i = 7
+Trace line 10: sum = 201
+Trace line 9: for #9: i = 8
+Trace line 10: sum = 219
+Trace line 11: return True
+Trace line 33: Call function sjekk_kontrollsiffer with parameters [10, [5, 4, 3, 2, 7, 6, 5, 4, 3, 2]]
+Trace line 8: sum = 0
+Trace line 9: Call function range with parameters [0, 10]
+Trace line 9: for #1: i = 0
+Trace line 10: sum = 5
+Trace line 9: for #2: i = 1
+Trace line 10: sum = 13
+Trace line 9: for #3: i = 2
+Trace line 10: sum = 22
+Trace line 9: for #4: i = 3
+Trace line 10: sum = 30
+Trace line 9: for #5: i = 4
+Trace line 10: sum = 65
+Trace line 9: for #6: i = 5
+Trace line 10: sum = 101
+Trace line 9: for #7: i = 6
+Trace line 10: sum = 136
+Trace line 9: for #8: i = 7
+Trace line 10: sum = 168
+Trace line 9: for #9: i = 8
+Trace line 10: sum = 195
+Trace line 9: for #10: i = 9
+Trace line 10: sum = 197
+Trace line 11: return False
+Trace line 33: else:
+Trace line 36: Call function print with parameters ["Fødselsnummer", "12345678910", "har feil i kontrollsiffer."]
+Trace line 23: while True: ...
+Trace line 24: Call function input with parameters ["Fødselsnummer: "]
+Trace line 24: Call function kun_sifre with parameters ["1234567891"]
+Trace line 14: res = ""
+Trace line 15: Call function len with parameters ["1234567891"]
+Trace line 15: Call function range with parameters [0, 10]
+Trace line 15: for #1: i = 0
+Trace line 16: c = "1"
+Trace line 17: if True alt #1
+Trace line 18: res = "1"
+Trace line 15: for #2: i = 1
+Trace line 16: c = "2"
+Trace line 17: if True alt #1
+Trace line 18: res = "12"
+Trace line 15: for #3: i = 2
+Trace line 16: c = "3"
+Trace line 17: if True alt #1
+Trace line 18: res = "123"
+Trace line 15: for #4: i = 3
+Trace line 16: c = "4"
+Trace line 17: if True alt #1
+Trace line 18: res = "1234"
+Trace line 15: for #5: i = 4
+Trace line 16: c = "5"
+Trace line 17: if True alt #1
+Trace line 18: res = "12345"
+Trace line 15: for #6: i = 5
+Trace line 16: c = "6"
+Trace line 17: if True alt #1
+Trace line 18: res = "123456"
+Trace line 15: for #7: i = 6
+Trace line 16: c = "7"
+Trace line 17: if True alt #1
+Trace line 18: res = "1234567"
+Trace line 15: for #8: i = 7
+Trace line 16: c = "8"
+Trace line 17: if True alt #1
+Trace line 18: res = "12345678"
+Trace line 15: for #9: i = 8
+Trace line 16: c = "9"
+Trace line 17: if True alt #1
+Trace line 18: res = "123456789"
+Trace line 15: for #10: i = 9
+Trace line 16: c = "1"
+Trace line 17: if True alt #1
+Trace line 18: res = "1234567891"
+Trace line 21: return "1234567891"
+Trace line 24: fnr = "1234567891"
+Trace line 27: Call function len with parameters ["1234567891"]
+Trace line 27: Call function len with parameters ["1234567891"]
+Trace line 27: if True alt #1
+Trace line 28: Call function print with parameters ["1234567891", "har ikke 11 sifre!"]
+Trace line 23: while True: ...
+Trace line 24: Call function input with parameters ["Fødselsnummer: "]
+Trace line 24: Call function kun_sifre with parameters ["05029830802"]
+Trace line 14: res = ""
+Trace line 15: Call function len with parameters ["05029830802"]
+Trace line 15: Call function range with parameters [0, 11]
+Trace line 15: for #1: i = 0
+Trace line 16: c = "0"
+Trace line 17: if True alt #1
+Trace line 18: res = "0"
+Trace line 15: for #2: i = 1
+Trace line 16: c = "5"
+Trace line 17: if True alt #1
+Trace line 18: res = "05"
+Trace line 15: for #3: i = 2
+Trace line 16: c = "0"
+Trace line 17: if True alt #1
+Trace line 18: res = "050"
+Trace line 15: for #4: i = 3
+Trace line 16: c = "2"
+Trace line 17: if True alt #1
+Trace line 18: res = "0502"
+Trace line 15: for #5: i = 4
+Trace line 16: c = "9"
+Trace line 17: if True alt #1
+Trace line 18: res = "05029"
+Trace line 15: for #6: i = 5
+Trace line 16: c = "8"
+Trace line 17: if True alt #1
+Trace line 18: res = "050298"
+Trace line 15: for #7: i = 6
+Trace line 16: c = "3"
+Trace line 17: if True alt #1
+Trace line 18: res = "0502983"
+Trace line 15: for #8: i = 7
+Trace line 16: c = "0"
+Trace line 17: if True alt #1
+Trace line 18: res = "05029830"
+Trace line 15: for #9: i = 8
+Trace line 16: c = "8"
+Trace line 17: if True alt #1
+Trace line 18: res = "050298308"
+Trace line 15: for #10: i = 9
+Trace line 16: c = "0"
+Trace line 17: if True alt #1
+Trace line 18: res = "0502983080"
+Trace line 15: for #11: i = 10
+Trace line 16: c = "2"
+Trace line 17: if True alt #1
+Trace line 18: res = "05029830802"
+Trace line 21: return "05029830802"
+Trace line 24: fnr = "05029830802"
+Trace line 27: Call function len with parameters ["05029830802"]
+Trace line 27: Call function len with parameters ["05029830802"]
+Trace line 27: else:
+Trace line 30: sifre = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Trace line 31: Call function range with parameters [0, 11]
+Trace line 31: for #1: i = 0
+Trace line 32: Call function int with parameters ["0"]
+Trace line 32: sifre[0] = 0
+Trace line 31: for #2: i = 1
+Trace line 32: Call function int with parameters ["5"]
+Trace line 32: sifre[1] = 5
+Trace line 31: for #3: i = 2
+Trace line 32: Call function int with parameters ["0"]
+Trace line 32: sifre[2] = 0
+Trace line 31: for #4: i = 3
+Trace line 32: Call function int with parameters ["2"]
+Trace line 32: sifre[3] = 2
+Trace line 31: for #5: i = 4
+Trace line 32: Call function int with parameters ["9"]
+Trace line 32: sifre[4] = 9
+Trace line 31: for #6: i = 5
+Trace line 32: Call function int with parameters ["8"]
+Trace line 32: sifre[5] = 8
+Trace line 31: for #7: i = 6
+Trace line 32: Call function int with parameters ["3"]
+Trace line 32: sifre[6] = 3
+Trace line 31: for #8: i = 7
+Trace line 32: Call function int with parameters ["0"]
+Trace line 32: sifre[7] = 0
+Trace line 31: for #9: i = 8
+Trace line 32: Call function int with parameters ["8"]
+Trace line 32: sifre[8] = 8
+Trace line 31: for #10: i = 9
+Trace line 32: Call function int with parameters ["0"]
+Trace line 32: sifre[9] = 0
+Trace line 31: for #11: i = 10
+Trace line 32: Call function int with parameters ["2"]
+Trace line 32: sifre[10] = 2
+Trace line 33: Call function sjekk_kontrollsiffer with parameters [9, [3, 7, 6, 1, 8, 9, 4, 5, 2]]
+Trace line 8: sum = 0
+Trace line 9: Call function range with parameters [0, 9]
+Trace line 9: for #1: i = 0
+Trace line 10: sum = 0
+Trace line 9: for #2: i = 1
+Trace line 10: sum = 35
+Trace line 9: for #3: i = 2
+Trace line 10: sum = 35
+Trace line 9: for #4: i = 3
+Trace line 10: sum = 37
+Trace line 9: for #5: i = 4
+Trace line 10: sum = 109
+Trace line 9: for #6: i = 5
+Trace line 10: sum = 181
+Trace line 9: for #7: i = 6
+Trace line 10: sum = 193
+Trace line 9: for #8: i = 7
+Trace line 10: sum = 193
+Trace line 9: for #9: i = 8
+Trace line 10: sum = 209
+Trace line 11: return True
+Trace line 33: Call function sjekk_kontrollsiffer with parameters [10, [5, 4, 3, 2, 7, 6, 5, 4, 3, 2]]
+Trace line 8: sum = 0
+Trace line 9: Call function range with parameters [0, 10]
+Trace line 9: for #1: i = 0
+Trace line 10: sum = 0
+Trace line 9: for #2: i = 1
+Trace line 10: sum = 20
+Trace line 9: for #3: i = 2
+Trace line 10: sum = 20
+Trace line 9: for #4: i = 3
+Trace line 10: sum = 24
+Trace line 9: for #5: i = 4
+Trace line 10: sum = 87
+Trace line 9: for #6: i = 5
+Trace line 10: sum = 135
+Trace line 9: for #7: i = 6
+Trace line 10: sum = 150
+Trace line 9: for #8: i = 7
+Trace line 10: sum = 150
+Trace line 9: for #9: i = 8
+Trace line 10: sum = 174
+Trace line 9: for #10: i = 9
+Trace line 10: sum = 174
+Trace line 11: return True
+Trace line 33: if True alt #1
+Trace line 34: Call function print with parameters ["Fødselsnummer", "05029830802", "er OK."]
+Trace line 23: while True: ...
+Trace line 24: Call function input with parameters ["Fødselsnummer: "]
+Trace line 24: Call function kun_sifre with parameters ["09019844762"]
+Trace line 14: res = ""
+Trace line 15: Call function len with parameters ["09019844762"]
+Trace line 15: Call function range with parameters [0, 11]
+Trace line 15: for #1: i = 0
+Trace line 16: c = "0"
+Trace line 17: if True alt #1
+Trace line 18: res = "0"
+Trace line 15: for #2: i = 1
+Trace line 16: c = "9"
+Trace line 17: if True alt #1
+Trace line 18: res = "09"
+Trace line 15: for #3: i = 2
+Trace line 16: c = "0"
+Trace line 17: if True alt #1
+Trace line 18: res = "090"
+Trace line 15: for #4: i = 3
+Trace line 16: c = "1"
+Trace line 17: if True alt #1
+Trace line 18: res = "0901"
+Trace line 15: for #5: i = 4
+Trace line 16: c = "9"
+Trace line 17: if True alt #1
+Trace line 18: res = "09019"
+Trace line 15: for #6: i = 5
+Trace line 16: c = "8"
+Trace line 17: if True alt #1
+Trace line 18: res = "090198"
+Trace line 15: for #7: i = 6
+Trace line 16: c = "4"
+Trace line 17: if True alt #1
+Trace line 18: res = "0901984"
+Trace line 15: for #8: i = 7
+Trace line 16: c = "4"
+Trace line 17: if True alt #1
+Trace line 18: res = "09019844"
+Trace line 15: for #9: i = 8
+Trace line 16: c = "7"
+Trace line 17: if True alt #1
+Trace line 18: res = "090198447"
+Trace line 15: for #10: i = 9
+Trace line 16: c = "6"
+Trace line 17: if True alt #1
+Trace line 18: res = "0901984476"
+Trace line 15: for #11: i = 10
+Trace line 16: c = "2"
+Trace line 17: if True alt #1
+Trace line 18: res = "09019844762"
+Trace line 21: return "09019844762"
+Trace line 24: fnr = "09019844762"
+Trace line 27: Call function len with parameters ["09019844762"]
+Trace line 27: Call function len with parameters ["09019844762"]
+Trace line 27: else:
+Trace line 30: sifre = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Trace line 31: Call function range with parameters [0, 11]
+Trace line 31: for #1: i = 0
+Trace line 32: Call function int with parameters ["0"]
+Trace line 32: sifre[0] = 0
+Trace line 31: for #2: i = 1
+Trace line 32: Call function int with parameters ["9"]
+Trace line 32: sifre[1] = 9
+Trace line 31: for #3: i = 2
+Trace line 32: Call function int with parameters ["0"]
+Trace line 32: sifre[2] = 0
+Trace line 31: for #4: i = 3
+Trace line 32: Call function int with parameters ["1"]
+Trace line 32: sifre[3] = 1
+Trace line 31: for #5: i = 4
+Trace line 32: Call function int with parameters ["9"]
+Trace line 32: sifre[4] = 9
+Trace line 31: for #6: i = 5
+Trace line 32: Call function int with parameters ["8"]
+Trace line 32: sifre[5] = 8
+Trace line 31: for #7: i = 6
+Trace line 32: Call function int with parameters ["4"]
+Trace line 32: sifre[6] = 4
+Trace line 31: for #8: i = 7
+Trace line 32: Call function int with parameters ["4"]
+Trace line 32: sifre[7] = 4
+Trace line 31: for #9: i = 8
+Trace line 32: Call function int with parameters ["7"]
+Trace line 32: sifre[8] = 7
+Trace line 31: for #10: i = 9
+Trace line 32: Call function int with parameters ["6"]
+Trace line 32: sifre[9] = 6
+Trace line 31: for #11: i = 10
+Trace line 32: Call function int with parameters ["2"]
+Trace line 32: sifre[10] = 2
+Trace line 33: Call function sjekk_kontrollsiffer with parameters [9, [3, 7, 6, 1, 8, 9, 4, 5, 2]]
+Trace line 8: sum = 0
+Trace line 9: Call function range with parameters [0, 9]
+Trace line 9: for #1: i = 0
+Trace line 10: sum = 0
+Trace line 9: for #2: i = 1
+Trace line 10: sum = 63
+Trace line 9: for #3: i = 2
+Trace line 10: sum = 63
+Trace line 9: for #4: i = 3
+Trace line 10: sum = 64
+Trace line 9: for #5: i = 4
+Trace line 10: sum = 136
+Trace line 9: for #6: i = 5
+Trace line 10: sum = 208
+Trace line 9: for #7: i = 6
+Trace line 10: sum = 224
+Trace line 9: for #8: i = 7
+Trace line 10: sum = 244
+Trace line 9: for #9: i = 8
+Trace line 10: sum = 258
+Trace line 11: return True
+Trace line 33: Call function sjekk_kontrollsiffer with parameters [10, [5, 4, 3, 2, 7, 6, 5, 4, 3, 2]]
+Trace line 8: sum = 0
+Trace line 9: Call function range with parameters [0, 10]
+Trace line 9: for #1: i = 0
+Trace line 10: sum = 0
+Trace line 9: for #2: i = 1
+Trace line 10: sum = 36
+Trace line 9: for #3: i = 2
+Trace line 10: sum = 36
+Trace line 9: for #4: i = 3
+Trace line 10: sum = 38
+Trace line 9: for #5: i = 4
+Trace line 10: sum = 101
+Trace line 9: for #6: i = 5
+Trace line 10: sum = 149
+Trace line 9: for #7: i = 6
+Trace line 10: sum = 169
+Trace line 9: for #8: i = 7
+Trace line 10: sum = 185
+Trace line 9: for #9: i = 8
+Trace line 10: sum = 206
+Trace line 9: for #10: i = 9
+Trace line 10: sum = 218
+Trace line 11: return True
+Trace line 33: if True alt #1
+Trace line 34: Call function print with parameters ["Fødselsnummer", "09019844762", "er OK."]
+Trace line 23: while True: ...
+Trace line 24: Call function input with parameters ["Fødselsnummer: "]
+Trace line 24: Call function kun_sifre with parameters ["12"]
+Trace line 14: res = ""
+Trace line 15: Call function len with parameters ["12"]
+Trace line 15: Call function range with parameters [0, 2]
+Trace line 15: for #1: i = 0
+Trace line 16: c = "1"
+Trace line 17: if True alt #1
+Trace line 18: res = "1"
+Trace line 15: for #2: i = 1
+Trace line 16: c = "2"
+Trace line 17: if True alt #1
+Trace line 18: res = "12"
+Trace line 21: return "12"
+Trace line 24: fnr = "12"
+Trace line 27: Call function len with parameters ["12"]
+Trace line 27: Call function len with parameters ["12"]
+Trace line 27: if True alt #1
+Trace line 28: Call function print with parameters ["12", "har ikke 11 sifre!"]
+Trace line 23: while True: ...
+Trace line 24: Call function input with parameters ["Fødselsnummer: "]
+Trace line 24: Call function kun_sifre with parameters ["exit"]
+Trace line 14: res = ""
+Trace line 15: Call function len with parameters ["exit"]
+Trace line 15: Call function range with parameters [0, 4]
+Trace line 15: for #1: i = 0
+Trace line 16: c = "e"
+Trace line 17: else:
+Trace line 20: pass
+Trace line 15: for #2: i = 1
+Trace line 16: c = "x"
+Trace line 17: else:
+Trace line 20: pass
+Trace line 15: for #3: i = 2
+Trace line 16: c = "i"
+Trace line 17: else:
+Trace line 20: pass
+Trace line 15: for #4: i = 3
+Trace line 16: c = "t"
+Trace line 17: else:
+Trace line 20: pass
+Trace line 21: return ""
+Trace line 24: fnr = ""
+Trace line 25: if True alt #1
+Trace line 25: Call function exit with parameters [0]
