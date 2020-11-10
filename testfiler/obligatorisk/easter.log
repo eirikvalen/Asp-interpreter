@@ -1,0 +1,105 @@
+Trace line 3: M_name = ["", "", "", "", "", "", "", "", "", "", "", "", ""]
+Trace line 4: M_name[3] = "mars"
+Trace line 4: M_name[4] = "april"
+Trace line 6: for #1: y = 2020
+Trace line 7: a = 6
+Trace line 8: b = 20
+Trace line 9: c = 20
+Trace line 10: d = 5
+Trace line 11: e = 0
+Trace line 12: f = 1
+Trace line 13: g = 6
+Trace line 14: h = 18
+Trace line 15: i = 5
+Trace line 16: k = 0
+Trace line 17: l = 3
+Trace line 18: m = 0
+Trace line 20: month = 4
+Trace line 21: day = 12
+Trace line 22: Call function str with parameters [12]
+Trace line 22: Call function print with parameters ["12. april", 2020]
+Trace line 6: for #2: y = 2021
+Trace line 7: a = 7
+Trace line 8: b = 20
+Trace line 9: c = 21
+Trace line 10: d = 5
+Trace line 11: e = 0
+Trace line 12: f = 1
+Trace line 13: g = 6
+Trace line 14: h = 7
+Trace line 15: i = 5
+Trace line 16: k = 1
+Trace line 17: l = 6
+Trace line 18: m = 0
+Trace line 20: month = 4
+Trace line 21: day = 4
+Trace line 22: Call function str with parameters [4]
+Trace line 22: Call function print with parameters ["4. april", 2021]
+Trace line 6: for #3: y = 2022
+Trace line 7: a = 8
+Trace line 8: b = 20
+Trace line 9: c = 22
+Trace line 10: d = 5
+Trace line 11: e = 0
+Trace line 12: f = 1
+Trace line 13: g = 6
+Trace line 14: h = 26
+Trace line 15: i = 5
+Trace line 16: k = 2
+Trace line 17: l = 0
+Trace line 18: m = 0
+Trace line 20: month = 4
+Trace line 21: day = 17
+Trace line 22: Call function str with parameters [17]
+Trace line 22: Call function print with parameters ["17. april", 2022]
+Trace line 6: for #4: y = 2023
+Trace line 7: a = 9
+Trace line 8: b = 20
+Trace line 9: c = 23
+Trace line 10: d = 5
+Trace line 11: e = 0
+Trace line 12: f = 1
+Trace line 13: g = 6
+Trace line 14: h = 15
+Trace line 15: i = 5
+Trace line 16: k = 3
+Trace line 17: l = 3
+Trace line 18: m = 0
+Trace line 20: month = 4
+Trace line 21: day = 9
+Trace line 22: Call function str with parameters [9]
+Trace line 22: Call function print with parameters ["9. april", 2023]
+Trace line 6: for #5: y = 2024
+Trace line 7: a = 10
+Trace line 8: b = 20
+Trace line 9: c = 24
+Trace line 10: d = 5
+Trace line 11: e = 0
+Trace line 12: f = 1
+Trace line 13: g = 6
+Trace line 14: h = 4
+Trace line 15: i = 6
+Trace line 16: k = 0
+Trace line 17: l = 5
+Trace line 18: m = 0
+Trace line 20: month = 3
+Trace line 21: day = 31
+Trace line 22: Call function str with parameters [31]
+Trace line 22: Call function print with parameters ["31. mars", 2024]
+Trace line 6: for #6: y = 2025
+Trace line 7: a = 11
+Trace line 8: b = 20
+Trace line 9: c = 25
+Trace line 10: d = 5
+Trace line 11: e = 0
+Trace line 12: f = 1
+Trace line 13: g = 6
+Trace line 14: h = 23
+Trace line 15: i = 6
+Trace line 16: k = 1
+Trace line 17: l = 6
+Trace line 18: m = 0
+Trace line 20: month = 4
+Trace line 21: day = 20
+Trace line 22: Call function str with parameters [20]
+Trace line 22: Call function print with parameters ["20. april", 2025]

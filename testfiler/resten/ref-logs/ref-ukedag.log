@@ -1,3 +1,4 @@
+
 Trace line 4: ukedag = ['man', 'tirs', 'ons', 'tors', 'fre', 'lør', 'søn']
 Trace line 5: m_leng = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 Trace line 7: m_navn = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

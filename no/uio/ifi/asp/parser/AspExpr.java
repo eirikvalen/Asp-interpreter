@@ -47,7 +47,6 @@ public class AspExpr extends AspSyntax {
         for (int i = 1; i < andTests.size(); ++i) {
             if (v.getBoolValue("or operand", this))
                 return v;
-            trace("or");
             v = andTests.get(i).eval(curScope);
         }
         return v;

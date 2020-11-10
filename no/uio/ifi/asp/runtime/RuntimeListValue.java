@@ -24,7 +24,15 @@ public class RuntimeListValue extends RuntimeValue {
 
     @Override
     protected String showInfo(ArrayList<RuntimeValue> inUse, boolean toPrint) {
-       return listValue.toString();
+        StringBuilder s = new StringBuilder("[");
+        for(RuntimeValue v : listValue){
+            s.append(v.showInfo()).append(", ");
+        }
+        if(s.length() > 1){
+            s.delete(s.length()-2, s.length());
+        }
+        s.append("]");
+        return s.toString();
 
     }
 
@@ -89,5 +97,10 @@ public class RuntimeListValue extends RuntimeValue {
     @Override
     public void evalAssignElem(RuntimeValue inx, RuntimeValue val, AspSyntax where) {
         listValue.set((int) inx.getIntValue("assign element", where), val);
+    }
+
+    @Override
+    public RuntimeValue evalLen(AspSyntax where) {
+        return new RuntimeIntValue(listValue.size());
     }
 }

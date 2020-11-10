@@ -77,4 +77,15 @@ public class RuntimeDictValue extends RuntimeValue {
         runtimeError("Type error for subscription.", where);
         return null;  // Required by the compiler
     }
+
+    @Override
+    public RuntimeValue evalLen(AspSyntax where) {
+        return new RuntimeIntValue(dictValue.size());
+    }
+
+    @Override
+    public void evalAssignElem(RuntimeValue inx, RuntimeValue val, AspSyntax where) {
+        dictValue.put(inx.getStringValue("assign element", where), val);
+    }
 }
+

@@ -1,5 +1,9 @@
 package no.uio.ifi.asp.parser;
 
+import no.uio.ifi.asp.runtime.RuntimeFuncValue;
+import no.uio.ifi.asp.runtime.RuntimeReturnValue;
+import no.uio.ifi.asp.runtime.RuntimeScope;
+import no.uio.ifi.asp.runtime.RuntimeValue;
 import no.uio.ifi.asp.scanner.Scanner;
 import no.uio.ifi.asp.scanner.TokenKind;
 
@@ -40,6 +44,18 @@ public class AspFuncDef extends AspCompoundStmt {
         return afd;
     }
 
+    public void evalSuite(RuntimeScope scope) throws RuntimeReturnValue {
+        suite.eval(scope);
+    }
+
+    public ArrayList<AspName> getFormalParameters() {
+        ArrayList<AspName> formalParams = new ArrayList<>(names);
+        formalParams.remove(0);
+        return formalParams;
+    }
+
+
+
     @Override
     public void prettyPrint() {
         prettyWrite("def ");
@@ -55,5 +71,14 @@ public class AspFuncDef extends AspCompoundStmt {
         prettyWrite("):");
         suite.prettyPrint();
         prettyWriteLn();
+    }
+
+    @Override
+    public RuntimeValue eval(RuntimeScope curScope) throws RuntimeReturnValue {
+        RuntimeFuncValue v = new RuntimeFuncValue(this, curScope, names.get(0).name);
+        curScope.assign(names.get(0).name, v);
+        trace("def " + names.get(0).name);
+        return v;
+
     }
 }
